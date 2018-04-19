@@ -9,9 +9,10 @@ export default class Navbar extends React.Component {
       <header>
         <nav>
           <ul>
-            <li><a href="/menu">Menu</a></li>
-            <li><a href="/about">About Us</a></li>
             <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/blog">Adara's Blog</a></li>
           </ul>
         </nav>
       </header>
