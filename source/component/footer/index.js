@@ -15,8 +15,9 @@ class Footer extends React.Component {
 
         <h4>Contact Us</h4>
         <p>Contact us for local delivery in the greater Seattle area (206) 468-9047</p>
+        Copyright &copy; Adara Hair Extensions
       </footer>
-     )
+    );
   }
 }
  

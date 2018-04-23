@@ -9,6 +9,10 @@ export default class Navbar extends React.Component {
       <header>
         <nav>
           <ul>
+            <input type="search" name="searchbtn"/>
+            <a href="/cart"><img src={require(`${__dirname}/../footer/icons/shopping-cart.png`)} className="icon"/></a>
+          </ul>
+          <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
             <li><a href="/faq">FAQ</a></li>
