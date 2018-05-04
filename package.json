@@ -1,7 +1,7 @@
 {
   "name": "hair-by-adara-frontend",
   "version": "1.0.0",
-  "description": "the frontend of king philly cheesetsteaks website",
+  "description": "the frontend of hair by adara website",
   "main": "index.js",
   "scripts": {
     "bundle": "webpack",
@@ -26,14 +26,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/king-philly-cheesesteaks/frontend.git"
+    "url": "git+https://github.com/hair-by-adara/frontend.git"
   },
-  "author": "Koko Kassa & Yohanes Demissie",
+  "author": "Koko Kassa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/king-philly-cheesesteaks/frontend/issues"
+    "url": "https://github.com/hair-by-adara/frontend/issues"
   },
-  "homepage": "https://github.com/king-philly-cheesesteaks/frontend#readme",
+  "homepage": "https://github.com/hair-by-adara/frontend#readme",
   "dependencies": {
     "artillery": "^1.6.0-14",
     "babel-core": "^6.26.0",

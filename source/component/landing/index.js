@@ -1,19 +1,20 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { Carousel } from 'react-responsive-carousel';
 
 class Landing extends React.Component {
   render() { 
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    };
+    // var settings = {
+    //   dots: true,
+    //   infinite: true,
+    //   speed: 2,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    // };
     return ( 
       <div className="main-page">
         <h1>Welcome to Adara Hair Extensions!</h1>
-        <Slider {...settings} id="slider-images">
+        {/* <Carousel {...settings} id="slider-images">
           <div>
             <img src="http://via.placeholder.com/500x500"/>
           </div>
@@ -29,7 +30,7 @@ class Landing extends React.Component {
           <div>
             <img src="http://via.placeholder.com/500x100"/>
           </div>
-        </Slider>
+        </Carousel> */}
         <div className="landing-content">
           <div className="landing-brazilian">
             <a href="brazilian"><img src="http://via.placeholder.com/250x250"/></a>
