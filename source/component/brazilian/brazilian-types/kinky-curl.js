@@ -1,4 +1,8 @@
 import React from 'react';
+import bkcPic from '../../images/kinky-curl-3–bundles.JPG';
+import bwPic from '../../images/body-wave-three-brazilian-front-angle.JPG';
+import sPic from '../../images/straight-3-bundles.JPG';
+
 
 export default class BrazilianKinkyCurl extends React.Component {
   constructor(props) {
@@ -28,7 +32,7 @@ export default class BrazilianKinkyCurl extends React.Component {
     return ( 
       <div>
         <h1>Brazilian Kinky Curl</h1>
-        <img src="http://via.placeholder.com/250x250" alt="" srcset=""/>
+        <img src={bkcPic} width="35%" height="45%"/>
         <h3>$ 80.00</h3>
         <p>Length</p>
         <select name="length" id="BMBWLength">
@@ -92,9 +96,9 @@ export default class BrazilianKinkyCurl extends React.Component {
         </div>
         <div>
           <h3>More from this collection</h3>
-          <a href="https://www.hairbyadara.com/brazilian/straight"><img src="http://via.placeholder.com/250x250"/></a>
+          <a href="https://www.hairbyadara.com/brazilian/straight"><img src={bwPic} width="25%" height="25%"/></a>
           <p>Brazilian Mink Straight</p>
-          <a href="https://www.hairbyadara.com/brazilian/body-wave"><img src="http://via.placeholder.com/250x250"/></a>
+          <a href="https://www.hairbyadara.com/brazilian/body-wave"><img src={sPic} width="25%" height="25%"/></a>
           <p>Brazilian Mink Body-Wave</p>
         </div>
       </div>

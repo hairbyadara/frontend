@@ -29,7 +29,7 @@ export default class BodyWaveClosure extends React.Component {
     return ( 
       <div>
         <h1>Brazilian Mink Body Wave Closure</h1>
-        <img src="http://via.placeholder.com/250x250" alt="" srcset=""/>
+        <img src="http://via.placeholder.com/250x250" width="" height=""/>
         <h3>$ 95.00</h3>
         <p>Length</p>
         <select name="length" id="body-wave-closure-length">

@@ -1,50 +1,26 @@
 import React from 'react';
-import Slider from 'react-slick';
-import { Carousel } from 'react-responsive-carousel';
+import brazilianPic from '../images/spiral-curl-five-bundles.JPG';
+import closurePic from '../images/kinky-curly-closure-main.JPG';
+import straightPic from '../images/straight-3-bundles.JPG';
 
 class Landing extends React.Component {
   render() { 
-    // var settings = {
-    //   dots: true,
-    //   infinite: true,
-    //   speed: 2,
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1,
-    // };
     return ( 
       <div className="main-page">
         <h1>Welcome to Adara Hair Extensions!</h1>
-        {/* <Carousel {...settings} id="slider-images">
-          <div>
-            <img src="http://via.placeholder.com/500x500"/>
-          </div>
-          <div>
-            <img src="http://via.placeholder.com/500x400"/>
-          </div>
-          <div>
-            <img src="http://via.placeholder.com/500x300"/>
-          </div>
-          <div>
-            <img src="http://via.placeholder.com/500x200"/>
-          </div>
-          <div>
-            <img src="http://via.placeholder.com/500x100"/>
-          </div>
-        </Carousel> */}
         <div className="landing-content">
           <div className="landing-brazilian">
-            <a href="brazilian"><img src="http://via.placeholder.com/250x250"/></a>
+            <a href="brazilian"><img src={brazilianPic} width="25%" height="35%"/></a>
             <h2>Brazilian</h2>
           </div>
           <div className="landing-closure">
-            <a href="closures"><img src="http://via.placeholder.com/250x250"/></a>
+            <a href="closures"><img src={closurePic} width="25%" height="35%"/></a>
             <h2>Closures</h2>
           </div>
           <div className="landing-bundles">
-            <a href="bundles"><img src="http://via.placeholder.com/250x250"/></a>
+            <a href="bundles"><img src={straightPic} width="25%" height="35%"/></a>
             <h2>Bundles</h2>
           </div>
-          {/* <img src={require(`${__dirname}/stats.png`)} height="250" width="250"/> */}
         </div>
       </div>
     );

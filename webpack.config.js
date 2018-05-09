@@ -59,7 +59,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|jpeg|gif|png|tiff|svg)$/,
+        test: /\.(JPG|jpg|jpeg|gif|png|tiff|svg)$/,
         exclude: /\.glyph.svg/,
         use: [
           {
