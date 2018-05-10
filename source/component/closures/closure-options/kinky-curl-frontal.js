@@ -1,4 +1,9 @@
 import React from 'react';
+import straightClosure from '../../images/straight-closure.JPG';
+import straightFrontal from '../../images/straight-frontal.JPG';
+import bodyWaveClosure from '../../images/body-wave-closure.JPG';
+import kinkyClosure from '../../images/kinky-curly-closure-main.JPG';
+import kinkyFrontal from '../../images/kinky-curl-frontal.JPG';
 
 export default class KinkyCurlFrontal extends React.Component {
   constructor(props) {
@@ -29,7 +34,7 @@ export default class KinkyCurlFrontal extends React.Component {
     return ( 
       <div>
         <h1>Brazilian Kinky Curl Frontal</h1>
-        <img src="http://via.placeholder.com/250x250"/>
+        <img src={kinkyFrontal} width="35%" height="35%"/>
         <h3>$ 145.00</h3>
         <p>Length</p>
         <select name="kinky frontal length" id="kinky-frontal-length">
@@ -73,13 +78,13 @@ export default class KinkyCurlFrontal extends React.Component {
         </div> */}
         <div>
           <h3>More from this collection</h3>
-          <a href="https://www.hairbyadara.com/closures/body-wave-closure"><img src="http://via.placeholder.com/250x250"/></a>
+          <a href="https://www.hairbyadara.com/closures/body-wave-closure"><img src={bodyWaveClosure} width="25%" height="25%"/></a>
           <p>Brazilian Body Wave Closure</p>
-          <a href="https://www.hairbyadara.com/closures/kinky-curl-closure"><img src="http://via.placeholder.com/250x250"/></a>
+          <a href="https://www.hairbyadara.com/closures/kinky-curl-closure"><img src={kinkyClosure} width="25%" height="25%"/></a>
           <p>Brazilian Kinky Curl Closure</p>
-          <a href="https://www.hairbyadara.com/closures/straight-closure"><img src="http://via.placeholder.com/250x250"/></a>
+          <a href="https://www.hairbyadara.com/closures/straight-closure"><img src={straightClosure} width="25%" height="25%"/></a>
           <p>Brazilian Mink Straight Closure</p>
-          <a href="https://www.hairbyadara.com/closures/straight-frontal"><img src="http://via.placeholder.com/250x250"/></a>
+          <a href="https://www.hairbyadara.com/closures/straight-frontal"><img src={straightFrontal} width="25%" height="25%"/></a>
           <p>Brazilian Mink Straight Frontal</p>
         </div>
       </div>

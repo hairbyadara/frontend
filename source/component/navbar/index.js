@@ -1,4 +1,6 @@
 import React from 'react';
+import './style.scss';
+import logo from '../images/logo.png';
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -8,15 +10,17 @@ export default class Navbar extends React.Component {
     return (
       <header>
         <nav>
-          <ul>
-            <input type="search" name="searchbtn"/>
-            <a href="/cart"><img src={require(`${__dirname}/../footer/icons/shopping-cart.png`)} className="icon"/></a>
-          </ul>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a href="/blog">Adara's Blog</a></li>
+          <div id="search-cart">
+            <input id="search-bar" type="search" name="searchbtn" placeholder="Search..."/>
+            <label for="cart-icon">Cart</label>
+            <a href="/cart"><img src={require(`${__dirname}/../footer/icons/shopping-cart.png`)} className="icon" id="cart-icon" name="cart-icon"/></a>
+          </div>
+          <img src={logo} width="15%" height="15%" id="logo"/>
+          <ul id="nav">
+            <li className="nav-li"><a href="/">HOME</a></li>
+            <li className="nav-li"><a href="/about">ABOUT US</a></li>
+            <li className="nav-li"><a href="/faq">FAQ</a></li>
+            <li className="nav-li"><a href="/blog">ADARA'S BLOG</a></li>
           </ul>
         </nav>
       </header>
