@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.scss';
-import brazilianPic from '../images/spiral-curl-five-bundles.JPG';
+import bundlesPic from '../images/spiral-curl-five-bundles.JPG';
 import closurePic from '../images/kinky-curly-closure-main.JPG';
-import straightPic from '../images/straight-3-bundles.JPG';
+import brazilianPic from '../images/straight-3-bundles.JPG';
 // import { Slide } from 'react-slideshow-image';
 
 class Landing extends React.Component {
@@ -19,7 +19,7 @@ class Landing extends React.Component {
             <h2>Closures</h2>
           </div>
           <div id="landing-bundles">
-            <a href="bundles"><img src={straightPic} width="100%" height="100%"/></a>
+            <a href="bundles"><img src={bundlesPic} width="100%" height="100%"/></a>
             <h2>Bundles</h2>
           </div>
         </div>

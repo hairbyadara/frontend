@@ -6,17 +6,17 @@ import Footer from '../component/footer/index';
 import Brazilian from './brazilian';
 import Closures from './closures';
 import Bundles from './bundles';
-import BrazilianBodyWave from './brazilian/brazilian-types/body-wave';
-import BrazilianKinkyCurl from './brazilian/brazilian-types/kinky-curl';
-import BrazilianStraight from './brazilian/brazilian-types/straight';
+import BrazilianBodyWave from './brazilian/brazilian-types/body-wave/body-wave';
+import BrazilianKinkyCurl from './brazilian/brazilian-types/kinky-curl/kinky-curl';
+import BrazilianStraight from './brazilian/brazilian-types/straight/straight';
 import Cart from './checkout';
-import KinkyCurlClosure from './closures/closure-options/kinky-curl-closure';
-import KinkyCurlFrontal from './closures/closure-options/kinky-curl-frontal';
-import BodyWaveClosure from './closures/closure-options/body-wave-closure';
-import StraightClosure from './closures/closure-options/straight-closure';
-import StraightFrontal from './closures/closure-options/straight-frontal';
-import FourBundle from './bundles/bundle-options/4bundles';
-import FiveBundle from './bundles/bundle-options/5bundles';
+import KinkyCurlClosure from './closures/closure-options/kinky-curl-closure/kinky-curl-closure';
+import KinkyCurlFrontal from './closures/closure-options/kinky-curl-frontal/kinky-curl-frontal';
+import BodyWaveClosure from './closures/closure-options/body-wave-closure/body-wave-closure';
+import StraightClosure from './closures/closure-options/straight-closure/straight-closure';
+import StraightFrontal from './closures/closure-options/straight-frontal/straight-frontal';
+import FourBundle from './bundles/bundle-options/bundle-four/4bundles';
+import FiveBundle from './bundles/bundle-options/bundle-five/5bundles';
 
 class App extends React.Component {
   constructor(props) {
