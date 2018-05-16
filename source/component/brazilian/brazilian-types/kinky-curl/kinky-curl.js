@@ -33,7 +33,7 @@ export default class BrazilianKinkyCurl extends React.Component {
     return ( 
       <div>
         <div id="col1-kc">
-          <img src={bkcPic} id="kc-image" width="90%" height="65%"/>
+          <img src={bkcPic} id="kc-image" width="90%" height="52%"/>
         </div>
         <div id="col2-kc">
           <h1>Brazilian Kinky Curl</h1>
@@ -100,12 +100,16 @@ export default class BrazilianKinkyCurl extends React.Component {
             <a target="_blank" href="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-kinky-curl" class="share-google">+1</a>
           </div>
         </div>
-        <div>
+        <div id="brazilian-collection-pic3">
           <h3>More from this collection</h3>
-          <a href="https://www.hairbyadara.com/brazilian/straight"><img src={bwPic} width="25%" height="25%"/></a>
-          <p>Brazilian Mink Straight</p>
-          <a href="https://www.hairbyadara.com/brazilian/body-wave"><img src={sPic} width="25%" height="25%"/></a>
-          <p>Brazilian Mink Body-Wave</p>
+          <div className="brazilian-collection">
+            <a href="https://www.hairbyadara.com/brazilian/straight"><img src={bwPic} width="350" height="350"/></a>
+            <p>Brazilian Mink Straight</p>
+          </div>
+          <div className="brazilian-collection">
+            <a href="https://www.hairbyadara.com/brazilian/body-wave"><img src={sPic} width="350" height="350"/></a>
+            <p>Brazilian Mink Body-Wave</p>
+          </div>
         </div>
       </div>
     );

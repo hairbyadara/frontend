@@ -96,12 +96,16 @@ export default class BrazilianStraight extends React.Component {
             <a target="_blank" href="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-straight" class="share-google">+1</a>
           </div>
         </div>
-        <div>
-          <h3>More from this collection</h3>
-          <a href="https://www.hairbyadara.com/brazilian/straight"><img src={kinkyPic} width="25%" height="35%"/></a>
-          <p>Brazilian Kinky Curl</p>
-          <a href="https://www.hairbyadara.com/brazilian/body-wave"><img src={bodyWavePic} width="25%" height="35%"/></a>
-          <p>Brazilian Mink Body-Wave</p>
+        <div id="brazilian-collection-pic2">
+          <div className="brazilian-collection">
+            <h3>More from this collection</h3>
+            <a href="https://www.hairbyadara.com/brazilian/straight"><img src={kinkyPic} width="350" height="350"/></a>
+            <p>Brazilian Kinky Curl</p>
+          </div>
+          <div className="brazilian-collection">
+            <a href="https://www.hairbyadara.com/brazilian/body-wave"><img src={bodyWavePic} width="350" height="350"/></a>
+            <p>Brazilian Mink Body-Wave</p>
+          </div>
         </div>
       </div>
     );

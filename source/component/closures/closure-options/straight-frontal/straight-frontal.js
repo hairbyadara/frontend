@@ -40,18 +40,18 @@ export default class StraightFrontal extends React.Component {
         <div id="straight-frontal-info">
           <h1>Brazilian Mink Straight Frontal</h1>
           <h3>$ 145.00</h3>
-          <p>Length</p>
+          <p className="label">Length</p>
           <select name="straight frontal length" id="straight-frontal-length">
             <option value="12in">12"</option>
             <option value="14in">14"</option>
             <option value="16in">16"</option>
             <option value="18in">18"</option>
           </select>
-          <p>Hair Type</p>
+          <p className="label">Hair Type</p>
           <select name="straight frontal type" id="straight-frontal-type">
             <option value="lace">Lace</option>
           </select>
-          <p>Quantity</p>
+          <p className="label">Quantity</p>
           <select name="straight frontal quantity" id="straight-frontal-quantity">
             <option value="one">1</option>
             <option value="two">2</option>
@@ -81,16 +81,24 @@ export default class StraightFrontal extends React.Component {
             <a target="_blank" href="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/straight-frontal" class="share-google">+1</a>
           </div>
         </div>
-        <div>
+        <div id="options-container">
           <h3>More from this collection</h3>
-          <a href="https://www.hairbyadara.com/closures/body-wave-closure"><img src={bodyWaveClosure} width="25%" height="25%"/></a>
-          <p>Brazilian Body Wave Closure</p>
-          <a href="https://www.hairbyadara.com/closures/kinky-curl-closure"><img src={kinkyClosure} width="25%" height="25%"/></a>
-          <p>Brazilian Kinky Curl Closure</p>
-          <a href="https://www.hairbyadara.com/closures/kinky-curl-frontal"><img src={kinkyFrontal} width="25%" height="25%"/></a>
-          <p>Brazilian Kinky Curl Frontal</p>
-          <a href="https://www.hairbyadara.com/closures/straight-closure"><img src={straightClosure} width="25%" height="25%"/></a>
-          <p>Brazilian Mink Straight Closure</p>
+          <div className="closure-frontal-collection">
+            <a href="https://www.hairbyadara.com/closures/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic4" width="100%" height="100%"/></a>
+            <p>Brazilian Body Wave Closure</p>
+          </div>
+          <div className="closure-frontal-collection">
+            <a href="https://www.hairbyadara.com/closures/kinky-curl-closure"><img src={kinkyClosure} id="kc-collection-pic4" width="100%" height="100%"/></a>
+            <p>Brazilian Kinky Curl Closure</p>
+          </div>
+          <div className="closure-frontal-collection">
+            <a href="https://www.hairbyadara.com/closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kf-collection-pic4"width="100%" height="100%"/></a>
+            <p>Brazilian Kinky Curl Frontal</p>
+          </div>
+          <div className="closure-frontal-collection">
+            <a href="https://www.hairbyadara.com/closures/straight-closure"><img src={straightClosure} id="sc-collection-pic4" width="100%" height="100%"/></a>
+            <p>Brazilian Mink Straight Closure</p>
+          </div>
         </div>
       </div>
     );

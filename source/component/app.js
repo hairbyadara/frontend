@@ -18,7 +18,7 @@ import StraightFrontal from './closures/closure-options/straight-frontal/straigh
 import FourBundle from './bundles/bundle-options/bundle-four/4bundles';
 import FiveBundle from './bundles/bundle-options/bundle-five/5bundles';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -52,4 +52,3 @@ class App extends React.Component {
     );
   }
 }
-export default App;
