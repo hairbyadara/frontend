@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.scss';
 import logo from '../images/logo.png';
+import cartIcon from '../footer/icons/shopping-cart.png';
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -12,8 +13,8 @@ export default class Navbar extends React.Component {
         <nav>
           <div id="search-cart">
             <input id="search-bar" type="search" name="searchbtn" placeholder="Search..."/>
-            <label for="cart-icon">Cart</label>
-            <a href="/cart"><img src={require(`${__dirname}/../footer/icons/shopping-cart.png`)} className="icon" id="cart-icon" name="cart-icon"/></a>
+            <label htmlFor="cart-icon">Cart</label>
+            <a href="/cart"><img src={cartIcon} className="icon" id="cart-icon" name="cart-icon"/></a>
           </div>
           <img src={logo} width="15%" height="15%" id="logo"/>
           <ul id="nav">

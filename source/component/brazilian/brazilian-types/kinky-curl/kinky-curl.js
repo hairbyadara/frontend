@@ -3,9 +3,11 @@ import bkcPic from '../../../images/kinky-curl-3–bundles.JPG';
 import bwPic from '../../../images/body-wave-three-brazilian-front-angle.JPG';
 import sPic from '../../../images/straight-3-bundles.JPG';
 import './style.scss';
+import { connect } from 'react-redux';
+import { cartCreate } from '../../../../actions/cart-actions/index';
 
 
-export default class BrazilianKinkyCurl extends React.Component {
+class BrazilianKinkyCurl extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -15,19 +17,12 @@ export default class BrazilianKinkyCurl extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(event){
-    let {name,value} = event.target;
-    this.setState({
-      [name]: value,
-    });
-  }
-  handleSubmit(event) {
+  handleSubmit(event){
     event.preventDefault();
-    this.props.handleAddToCart(this.state);
-    this.setState({
-      length: '',
-      quantity: '',
-    });
+    this.props.cartItemCartCreate(this.state);
+  }
+  handleChange(event){
+    this.setState({[event.target.name]: event.target.value});
   }
   render() { 
     return ( 
@@ -39,32 +34,36 @@ export default class BrazilianKinkyCurl extends React.Component {
           <h1>Brazilian Kinky Curl</h1>
           <h3>$ 80.00</h3>
           <p>Length</p>
-          <select name="length" id="BMBWLength">
-            <option value="14in">14"</option>
-            <option value="16in">16"</option>
-            <option value="18in">18"</option>
-            <option value="20in">20"</option>
-            <option value="22in">22"</option>
-            <option value="24in">24"</option>
-            <option value="26in">26"</option>
-            <option value="28in">28"</option>
-            <option value="30in">30"</option>
-          </select>
-          <p>Quantity</p>
-          <select name="quantity" id="BMBQuantity">
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="four">4</option>
-            <option value="one">5</option>
-            <option value="one">6</option>
-            <option value="one">7</option>
-            <option value="one">8</option>
-            <option value="one">9</option>
-            <option value="ten">10</option>
-          </select>
-          <button type="submit"><span>Add to Cart</span></button>
-          <p>
+          <form className="brazilian-kinky-form" onSubmit={this.handleSubmit}>
+            <select name="length" id="BKCLength" onChange={this.handleChange} required>
+              <option value="" defaultValue>Select hair type...</option>
+              <option value="14in">14"</option>
+              <option value="16in">16"</option>
+              <option value="18in">18"</option>
+              <option value="20in">20"</option>
+              <option value="22in">22"</option>
+              <option value="24in">24"</option>
+              <option value="26in">26"</option>
+              <option value="28in">28"</option>
+              <option value="30in">30"</option>
+            </select>
+            <p>Quantity</p>
+            <select name="quantity" id="BKCQuantity" onChange={this.handleChange} required>
+              <option value="" defaultValue>Select quantity...</option>
+              <option value="one">1</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="one">5</option>
+              <option value="one">6</option>
+              <option value="one">7</option>
+              <option value="one">8</option>
+              <option value="one">9</option>
+              <option value="ten">10</option>
+            </select>
+            <button type="submit"><span>Add to Cart</span></button>
+          </form>
+          <h5>
         Our kinky curly hair allows our customers to experience a wash and go look. This hair offers the same standard quality in softness, but amps up the volume with extra coils with its curly texture from root to tip. It is the tightest curl pattern that we carry. 
             <ul>
               <li>
@@ -90,14 +89,14 @@ export default class BrazilianKinkyCurl extends React.Component {
               </li>
             </ul>
           Note: Excessive heat/color can damage texture and curl pattern of your bundles. 
-          </p>
-          <div class="fb-share-button" data-href="https://www.hairbyadara.com/brazilian/kinky-curl" data-layout="button" data-size="small" data-mobile-iframe="true">
+          </h5>
+          <div className="fb-share-button" data-href="https://www.hairbyadara.com/brazilian/kinky-curl" data-layout="button" data-size="small" data-mobile-iframe="true">
             <h3>Share this product</h3>
-            <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-kinky-curl" class="fb-xfbml-parse-ignore">Share</a>
-            <a target="_blank" href="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/brazilian-kinky-curl" class="share-twitter">Tweet</a>
-            <a target="_blank" href="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-kinky-curl&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" class="share-pinterest">Pin it</a>
-            <a target="_blank" href="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-kinky-curl&Title=Brazilian%20Kinky%20Curl&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" class="share-fancy">Fancy</a>
-            <a target="_blank" href="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-kinky-curl" class="share-google">+1</a>
+            <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-kinky-curl" className="fb-xfbml-parse-ignore">Share</a>
+            <a target="_blank" href="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/brazilian-kinky-curl" className="share-twitter">Tweet</a>
+            <a target="_blank" href="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-kinky-curl&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" className="share-pinterest">Pin it</a>
+            <a target="_blank" href="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-kinky-curl&Title=Brazilian%20Kinky%20Curl&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" className="share-fancy">Fancy</a>
+            <a target="_blank" href="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-kinky-curl" className="share-google">+1</a>
           </div>
         </div>
         <div id="brazilian-collection-pic3">
@@ -115,3 +114,11 @@ export default class BrazilianKinkyCurl extends React.Component {
     );
   }
 }
+const mapStateToProps = state => ({
+  carts: state,
+});
+const mapDispatchToProps = (dispatch, getState) => ({
+  cartItemCartCreate: cart => dispatch(cartCreate(cart)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BrazilianKinkyCurl);

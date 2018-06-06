@@ -1,5 +1,6 @@
 import React from 'react';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
+import { Provider } from 'react-redux';
+import createStore from '../lib/store';
 import Navbar from '../component/navbar/index';
 import Landing from '../component/landing/index.js';
 import Footer from '../component/footer/index';
@@ -17,18 +18,20 @@ import StraightClosure from './closures/closure-options/straight-closure/straigh
 import StraightFrontal from './closures/closure-options/straight-frontal/straight-frontal';
 import FourBundle from './bundles/bundle-options/bundle-four/4bundles';
 import FiveBundle from './bundles/bundle-options/bundle-five/5bundles';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
+const store = createStore();
+class App extends React.Component {
+  componentDidMount() {
+    store.subscribe(() => console.log('__STATE__:', store.getState()));
   }
-  render() { 
+  render() {     
     return (
       <div className='app'>
-        <BrowserRouter>
-          <React.Fragment>
-            <Navbar />
-            <div>
+        <Provider store={store}>
+          <BrowserRouter>
+            <React.Fragment>
+              <Navbar />
               <Route exact path='/'component={Landing}/>
               <Route exact path='/brazilian' component={Brazilian}/>
               <Route exact path='/brazilian/body-wave' component={BrazilianBodyWave}/>
@@ -44,11 +47,13 @@ export default class App extends React.Component {
               <Route exact path='/bundles/4-bundles' component={FourBundle}/>
               <Route exact path='/bundles/5-bundles' component={FiveBundle}/>              
               <Route exact path='/cart' component={Cart}/>
-            </div>
-            <Footer />
-          </React.Fragment>
-        </BrowserRouter>
+              <Footer />
+            </React.Fragment>
+          </BrowserRouter>
+        </Provider>
       </div>
     );
   }
 }
+
+export default App;

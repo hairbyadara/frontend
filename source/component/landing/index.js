@@ -10,8 +10,8 @@ class Landing extends React.Component {
   render() { 
     return ( 
       <div className="main-page">
+        <Carousel />
         <div className="landing-content">
-          <Carousel />
           <div id="landing-brazilian">
             <a href="brazilian"><img src={brazilianPic} width="100%" height="100%"/></a>
             <h2>Brazilian</h2>
@@ -21,7 +21,7 @@ class Landing extends React.Component {
             <h2>Closures</h2>
           </div>
           <div id="landing-bundles">
-            <a href="bundles"><img src={bundlesPic} id="bundle-pic" width="80%" height="85%"/></a>
+            <a href="bundles"><img src={bundlesPic} id="bundle-pic" width="90%" height="90%"/></a>
             <h2>Bundles</h2>
           </div>
         </div>

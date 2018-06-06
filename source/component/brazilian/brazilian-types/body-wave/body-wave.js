@@ -4,8 +4,11 @@ import FBIcon from '../../../footer/icons/facebook.png';
 import bodyWavePic from '../../../images/body-wave-single-bundle.JPG';
 import straightBundlePic from '../../../images/straight-3-bundles.JPG';
 import kinkyCurlPic from '../../../images/kinky-curl-3–bundles.JPG';
+import { connect } from 'react-redux';
+import { cartCreate } from '../../../../actions/cart-actions/index';
 
-export default class BrazilianBodyWave extends React.Component {
+
+class BrazilianBodyWave extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -15,19 +18,12 @@ export default class BrazilianBodyWave extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(event){
-    let {name,value} = event.target;
-    this.setState({
-      [name]: value,
-    });
-  }
-  handleSubmit(event) {
+  handleSubmit(event){
     event.preventDefault();
-    this.props.handleAddToCart(this.state);
-    this.setState({
-      length: '',
-      quantity: '',
-    });
+    this.props.cartItemCartCreate(this.state);
+  }
+  handleChange(event){
+    this.setState({[event.target.name]: event.target.value});
   }
   render() { 
     return ( 
@@ -39,33 +35,36 @@ export default class BrazilianBodyWave extends React.Component {
           <div id="col2-bw">
             <h1>Brazilian Mink Body Wave</h1>
             <h3>$ 75.00</h3>
-            <p>Length</p>
-            <select name="length" id="body-wave-length" onChange={this.handleChange}>
-              <option value="14in">14"</option>
-              <option value="16in">16"</option>
-              <option value="18in">18"</option>
-              <option value="20in">20"</option>
-              <option value="22in">22"</option>
-              <option value="24in">24"</option>
-              <option value="26in">26"</option>
-              <option value="28in">28"</option>
-              <option value="30in">30"</option>
-            </select>
-            <p>Quantity</p>
-            <select name="quantity" id="body-wave-quantity" onChange={this.handleChange}>
-              <option value="one">1</option>
-              <option value="two">2</option>
-              <option value="three">3</option>
-              <option value="four">4</option>
-              <option value="one">5</option>
-              <option value="one">6</option>
-              <option value="one">7</option>
-              <option value="one">8</option>
-              <option value="one">9</option>
-              <option value="ten">10</option>
-            </select>
-            <button type="submit" onSubmit={this.handleSubmit}><span>Add to Cart</span></button>
-            <p>Our 100% Virgin Mink Brazilian Hair is the highest quality Virgin Mink Brazilian hair on the market. Each selection has been collected from one donor. All cuticles are intact and you will notice each selection of our virgin hair has a natural taper at the end. All our Virgin Brazilian Hair has undergone a stringent quality assurance process to ensure it is free of imperfections. Our Virgin Brazilian Hair is available in a natural off black color 1b and will last well up to a year with proper care and maintenance
+            <form className="brazilian-bodywave-form" onSubmit={this.handleSubmit}>
+              <select name="length" id="body-wave-length" onChange={this.handleChange} required>
+                <option value="" defaultValue>Select hair type...</option>
+                <option value="14in">14"</option>
+                <option value="16in">16"</option>
+                <option value="18in">18"</option>
+                <option value="20in">20"</option>
+                <option value="22in">22"</option>
+                <option value="24in">24"</option>
+                <option value="26in">26"</option>
+                <option value="28in">28"</option>
+                <option value="30in">30"</option>
+              </select>
+              <p>Quantity</p>
+              <select name="quantity" id="body-wave-quantity" onChange={this.handleChange} required>
+                <option value="" defaultValue>Select quantity...</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="one">5</option>
+                <option value="one">6</option>
+                <option value="one">7</option>
+                <option value="one">8</option>
+                <option value="one">9</option>
+                <option value="ten">10</option>
+              </select>
+              <button type="submit"><span>Add to Cart</span></button>
+            </form>
+            <h5>Our 100% Virgin Mink Brazilian Hair is the highest quality Virgin Mink Brazilian hair on the market. Each selection has been collected from one donor. All cuticles are intact and you will notice each selection of our virgin hair has a natural taper at the end. All our Virgin Brazilian Hair has undergone a stringent quality assurance process to ensure it is free of imperfections. Our Virgin Brazilian Hair is available in a natural off black color 1b and will last well up to a year with proper care and maintenance
               <ul>
                 <li>
               Grade 7A Virgin Mink hair
@@ -87,14 +86,14 @@ export default class BrazilianBodyWave extends React.Component {
                 </li>
               </ul>
           Note: Excessive heat/color can damage texture and curl pattern of your bundles. 
-            </p>
-            <div class="fb-share-button" data-href="https://www.hairbyadara.com/brazilian/body-wave" data-layout="button" data-size="small" data-mobile-iframe="true" id="share-links">
+            </h5>
+            <div className="fb-share-button" data-href="https://www.hairbyadara.com/brazilian/body-wave" data-layout="button" data-size="small" data-mobile-iframe="true" id="share-links">
               <h3>Share this product</h3>
-              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hairbyadara.com%2Fbrazilian%2Fbody-wave&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
-              <a target="_blank" href="//twitter.com/share?text=Brazilian%20Mink%20Body%20Wave&amp;url=https://www.hairbyadara.com/products/brazilian-body-wave" class="share-twitter">Tweet</a>
-              <a target="_blank" href="//pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/products/brazilian-body-wave&amp;media=http://cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336&amp;description=Brazilian%20Mink%20Body%20Wave" class="share-pinterest">Pin it</a>
-              <a target="_blank" href="//fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/products/brazilian-body-wave&amp;Title=Brazilian%20Mink%20Body%20Wave&amp;Category=Other&amp;ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336" class="share-fancy">Fancy</a>
-              <a target="_blank" href="//plus.google.com/share?url=https://www.hairbyadara.com/products/brazilian-body-wave" class="share-google">+1</a>
+              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hairbyadara.com%2Fbrazilian%2Fbody-wave&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore">Share</a>
+              <a target="_blank" href="//twitter.com/share?text=Brazilian%20Mink%20Body%20Wave&amp;url=https://www.hairbyadara.com/products/brazilian-body-wave" className="share-twitter">Tweet</a>
+              <a target="_blank" href="//pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/products/brazilian-body-wave&amp;media=http://cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336&amp;description=Brazilian%20Mink%20Body%20Wave" className="share-pinterest">Pin it</a>
+              <a target="_blank" href="//fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/products/brazilian-body-wave&amp;Title=Brazilian%20Mink%20Body%20Wave&amp;Category=Other&amp;ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336" className="share-fancy">Fancy</a>
+              <a target="_blank" href="//plus.google.com/share?url=https://www.hairbyadara.com/products/brazilian-body-wave" className="share-google">+1</a>
             </div>
           </div>
         </div>
@@ -114,3 +113,11 @@ export default class BrazilianBodyWave extends React.Component {
     );
   }
 }
+const mapStateToProps = state => ({
+  carts: state,
+});
+const mapDispatchToProps = (dispatch, getState) => ({
+  cartItemCartCreate: cart => dispatch(cartCreate(cart)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BrazilianBodyWave);
