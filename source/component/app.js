@@ -1,16 +1,17 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import {BrowserRouter, Route} from 'react-router-dom';
 import createStore from '../lib/store';
-import Navbar from '../component/navbar/index';
-import Landing from '../component/landing/index.js';
-import Footer from '../component/footer/index';
-import Brazilian from './brazilian';
-import Closures from './closures';
-import Bundles from './bundles';
+import Navbar from '../component/navbar/navbar';
+import Landing from '../component/landing/landing';
+import Footer from '../component/footer/footer';
+import Brazilian from './brazilian/brazilians';
+import Closures from './closures/closures';
+import Bundles from './bundles/bundles';
 import BrazilianBodyWave from './brazilian/brazilian-types/body-wave/body-wave';
 import BrazilianKinkyCurl from './brazilian/brazilian-types/kinky-curl/kinky-curl';
 import BrazilianStraight from './brazilian/brazilian-types/straight/straight';
-import Cart from './checkout';
+import Cart from './checkout/checkout';
 import KinkyCurlClosure from './closures/closure-options/kinky-curl-closure/kinky-curl-closure';
 import KinkyCurlFrontal from './closures/closure-options/kinky-curl-frontal/kinky-curl-frontal';
 import BodyWaveClosure from './closures/closure-options/body-wave-closure/body-wave-closure';
@@ -18,7 +19,9 @@ import StraightClosure from './closures/closure-options/straight-closure/straigh
 import StraightFrontal from './closures/closure-options/straight-frontal/straight-frontal';
 import FourBundle from './bundles/bundle-options/bundle-four/4bundles';
 import FiveBundle from './bundles/bundle-options/bundle-five/5bundles';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
+import AboutUs from './aboutus/aboutus';
+import Blog from './blog/blog';
+import FAQs from './faq/faq';
 
 const store = createStore();
 class App extends React.Component {
@@ -33,6 +36,9 @@ class App extends React.Component {
             <React.Fragment>
               <Navbar />
               <Route exact path='/'component={Landing}/>
+              <Route exact path='/about' component={AboutUs}/>
+              <Route exact path='/blog' component={Blog}/>
+              <Route exact path='/FAQ' component={FAQs}/>
               <Route exact path='/brazilian' component={Brazilian}/>
               <Route exact path='/brazilian/body-wave' component={BrazilianBodyWave}/>
               <Route exact path='/brazilian/kinky-curl' component={BrazilianKinkyCurl}/>

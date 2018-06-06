@@ -94,7 +94,7 @@ class FourBundle extends React.Component {
                 <option value="28in">28" $ 105.00 </option>
                 <option value="30in">30" $ 110.00 </option>
               </select>
-              <button type="submit" onSubmit={this.handleSubmit}><span>Add to Cart</span></button>
+              <button type="submit" id="four-bundle-button"><span>Add to Cart</span></button>
             </form>
             <div className="fb-share-button" data-href="https://www.hairbyadara.com/bundles/4-bundles" data-layout="button" data-size="small" data-mobile-iframe="true">
               <h3>Share this product</h3>

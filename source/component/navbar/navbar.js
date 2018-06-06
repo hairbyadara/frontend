@@ -2,8 +2,9 @@ import React from 'react';
 import './style.scss';
 import logo from '../images/logo.png';
 import cartIcon from '../footer/icons/shopping-cart.png';
+import { connect } from 'react-redux';
 
-export default class Navbar extends React.Component {
+class Navbar extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -13,14 +14,14 @@ export default class Navbar extends React.Component {
         <nav>
           <div id="search-cart">
             <input id="search-bar" type="search" name="searchbtn" placeholder="Search..."/>
-            <label htmlFor="cart-icon">Cart</label>
+            <label htmlFor="cart-icon">Cart:{this.props.carts.cart ? this.props.carts.cart.length : 0}</label>
             <a href="/cart"><img src={cartIcon} className="icon" id="cart-icon" name="cart-icon"/></a>
           </div>
           <img src={logo} width="15%" height="15%" id="logo"/>
           <ul id="nav">
             <li className="nav-li"><a href="/">HOME</a></li>
             <li className="nav-li"><a href="/about">ABOUT US</a></li>
-            <li className="nav-li"><a href="/faq">FAQ</a></li>
+            <li className="nav-li"><a href="/FAQ">FAQ</a></li>
             <li className="nav-li"><a href="/blog">ADARA'S BLOG</a></li>
           </ul>
         </nav>
@@ -28,3 +29,7 @@ export default class Navbar extends React.Component {
     );
   }
 }
+const mapStateToProps = state => ({
+  carts: state,
+});
+export default connect(mapStateToProps)(Navbar);

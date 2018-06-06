@@ -67,7 +67,7 @@ class BodyWaveClosure extends React.Component {
               <option value="ten">10</option>
             </select>
             <br/>
-            <button type="submit"><span>Add to Cart</span></button>
+            <button id="body-wave-button" type="submit"><span>Add to Cart</span></button>
           </form>
           <h5>
         A closure is a small piece of lace fabric, usually about 4"x4", with individual strands of hair ventilated through and knotted directly to the lace. Our Lace Closures are without a doubt undetectable and appear to be coming directly from your scalp. Our closures blend effortlessly with our bundles finishing off your style with a virtually seamless weave. We carry 12", 14", 16" in stock (18" and 20" available upon request.) All lace closures measure at 4"x4".
