@@ -5,7 +5,7 @@ import bodyWavePic from '../../../images/body-wave-single-bundle.JPG';
 import straightBundlePic from '../../../images/straight-3-bundles.JPG';
 import kinkyCurlPic from '../../../images/kinky-curl-3–bundles.JPG';
 import { connect } from 'react-redux';
-import { cartCreate } from '../../../../actions/cart-actions/index';
+import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
 
 
 class BrazilianBodyWave extends React.Component {
@@ -114,10 +114,10 @@ class BrazilianBodyWave extends React.Component {
   }
 }
 const mapStateToProps = state => ({
-  carts: state,
+  cart: state,
 });
 const mapDispatchToProps = (dispatch, getState) => ({
-  cartItemCartCreate: cart => dispatch(cartCreate(cart)),
+  cartItemCartCreate: item => dispatch(cartCreate(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BrazilianBodyWave);

@@ -4,7 +4,7 @@ import straightPic from '../../../images/straight-3-bundles.JPG';
 import kinkyPic from '../../../images/kinky-curl-3–bundles.JPG';
 import bodyWavePic from '../../../images/body-wave-three-brazilian-front-angle.JPG';
 import { connect } from 'react-redux';
-import { cartCreate } from '../../../../actions/cart-actions/index';
+import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
 
 
 class BrazilianStraight extends React.Component {
@@ -111,10 +111,10 @@ class BrazilianStraight extends React.Component {
   }
 }
 const mapStateToProps = state => ({
-  carts: state,
+  cart: state,
 });
 const mapDispatchToProps = (dispatch, getState) => ({
-  cartItemCartCreate: cart => dispatch(cartCreate(cart)),
+  cartItemCartCreate: item => dispatch(cartCreate(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BrazilianStraight);

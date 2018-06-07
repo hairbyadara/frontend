@@ -14,7 +14,7 @@ class Navbar extends React.Component {
         <nav>
           <div id="search-cart">
             <input id="search-bar" type="search" name="searchbtn" placeholder="Search..."/>
-            <label htmlFor="cart-icon">Cart:{this.props.carts.cart ? this.props.carts.cart.length : 0}</label>
+            <label htmlFor="cart-icon">Cart:{this.props.cart.items ? this.props.cart.items.length : 0}</label>
             <a href="/cart"><img src={cartIcon} className="icon" id="cart-icon" name="cart-icon"/></a>
           </div>
           <img src={logo} width="15%" height="15%" id="logo"/>
@@ -30,6 +30,6 @@ class Navbar extends React.Component {
   }
 }
 const mapStateToProps = state => ({
-  carts: state,
+  cart: state,
 });
 export default connect(mapStateToProps)(Navbar);

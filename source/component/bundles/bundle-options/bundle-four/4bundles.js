@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.scss';
 import bundlePic from '../../../images/spiral-curl-five-bundles.JPG';
 import { connect } from 'react-redux';
-import { cartCreate } from '../../../../actions/cart-actions/index';
+import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
 
 
 class FourBundle extends React.Component {
@@ -112,10 +112,10 @@ class FourBundle extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  carts: state,
+  cart: state,
 });
 const mapDispatchToProps = (dispatch, getState) => ({
-  cartItemCartCreate: cart => dispatch(cartCreate(cart)),
+  cartItemCartCreate: item => dispatch(cartCreate(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FourBundle);

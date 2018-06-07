@@ -2,13 +2,13 @@ import React from 'react';
 import bundlePic from '../../../images/spiral-curl-five-bundles.JPG';
 import './styles.scss';
 import { connect } from 'react-redux';
-import { cartCreate } from '../../../../actions/cart-actions/index';
+import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
 
 class FiveBundle extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.cart
-      ? this.props.cart
+    this.state = this.props.item
+      ? this.props.item
       : { 
         texture: '',
         lengthOne: '',
@@ -125,10 +125,10 @@ class FiveBundle extends React.Component {
   }
 }
 const mapStateToProps = state => ({
-  carts: state,
+  cart: state,
 });
 const mapDispatchToProps = (dispatch, getState) => ({
-  cartItemCartCreate: cart => dispatch(cartCreate(cart)),
+  cartItemCartCreate: item => dispatch(cartCreate(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FiveBundle);

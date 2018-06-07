@@ -4,7 +4,7 @@ import bwPic from '../../../images/body-wave-three-brazilian-front-angle.JPG';
 import sPic from '../../../images/straight-3-bundles.JPG';
 import './style.scss';
 import { connect } from 'react-redux';
-import { cartCreate } from '../../../../actions/cart-actions/index';
+import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
 
 
 class BrazilianKinkyCurl extends React.Component {
@@ -115,10 +115,10 @@ class BrazilianKinkyCurl extends React.Component {
   }
 }
 const mapStateToProps = state => ({
-  carts: state,
+  cart: state,
 });
 const mapDispatchToProps = (dispatch, getState) => ({
-  cartItemCartCreate: cart => dispatch(cartCreate(cart)),
+  cartItemCartCreate: item => dispatch(cartCreate(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BrazilianKinkyCurl);

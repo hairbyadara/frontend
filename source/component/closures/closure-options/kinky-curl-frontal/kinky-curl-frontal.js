@@ -6,7 +6,7 @@ import bodyWaveClosure from '../../../images/body-wave-closure.JPG';
 import kinkyClosure from '../../../images/kinky-curly-closure-main.JPG';
 import kinkyFrontal from '../../../images/kinky-curl-frontal.JPG';
 import { connect } from 'react-redux';
-import { cartCreate } from '../../../../actions/cart-actions/index';
+import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
 
 class KinkyCurlFrontal extends React.Component {
   constructor(props) {
@@ -104,10 +104,10 @@ class KinkyCurlFrontal extends React.Component {
   }
 }
 const mapStateToProps = state => ({
-  carts: state,
+  cart: state,
 });
 const mapDispatchToProps = (dispatch, getState) => ({
-  cartItemCartCreate: cart => dispatch(cartCreate(cart)),
+  cartItemCartCreate: item => dispatch(cartCreate(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(KinkyCurlFrontal);
