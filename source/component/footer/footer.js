@@ -1,5 +1,7 @@
 import React from 'react';
+import {Link, BrowserRouter} from 'react-router-dom';
 import './style.scss';
+
 class Footer extends React.Component {
   constructor(props) {
     super(props);
@@ -9,10 +11,14 @@ class Footer extends React.Component {
       <footer>
         <div id="footer1">
           <h4>Follow Us</h4>
-          <a href="https://www.facebook.com/HairbyAdara/"><img src={require(`${__dirname}/icons/facebook.png`)} className="icon"/></a>
-          <a href="https://plus.google.com/108165777994246987880"><img src={require(`${__dirname}/icons/google.png`)} className="icon"/></a>
-          <a href="https://www.instagram.com/hairbyadara/"><img src={require(`${__dirname}/icons/instagram.png`)} className="icon"/></a>
-          <a href="https://twitter.com/hairbyadara"><img src={require(`${__dirname}/icons/twitter.png`)} className="icon"/></a>
+          <BrowserRouter>
+            <React.Fragment>
+              <Link to="https://www.facebook.com/HairbyAdara/"><img src={require(`${__dirname}/icons/facebook.png`)} className="icon"/></Link>
+              <Link to="https://plus.google.com/108165777994246987880"><img src={require(`${__dirname}/icons/google.png`)} className="icon"/></Link>
+              <Link to="https://www.instagram.com/hairbyadara/"><img src={require(`${__dirname}/icons/instagram.png`)} className="icon"/></Link>
+              <Link to="https://twitter.com/hairbyadara"><img src={require(`${__dirname}/icons/twitter.png`)} className="icon"/></Link>
+            </React.Fragment>
+          </BrowserRouter>
         </div>
         <div id="footer2">
           <h4>Contact Us</h4>

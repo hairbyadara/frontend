@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import createStore from '../lib/store';
 import Navbar from '../component/navbar/navbar';
 import Landing from '../component/landing/landing';
@@ -28,7 +28,10 @@ class App extends React.Component {
   componentDidMount() {
     store.subscribe(() => console.log('__STATE__:', store.getState()));
   }
-  render() {     
+  render() { 
+    // const history = syncHistoryWithStore(browserHistory, store);
+
+    // history.listen(location => analyticsService.track(location.pathname));    
     return (
       <div className='app'>
         <Provider store={store}>

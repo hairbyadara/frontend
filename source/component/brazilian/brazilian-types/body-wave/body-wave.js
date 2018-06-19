@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import FBIcon from '../../../footer/icons/facebook.png';
+import { Link, BrowserRouter } from 'react-router-dom';
 import bodyWavePic from '../../../images/body-wave-single-bundle.JPG';
 import straightBundlePic from '../../../images/straight-3-bundles.JPG';
 import kinkyCurlPic from '../../../images/kinky-curl-3–bundles.JPG';
@@ -12,6 +12,7 @@ class BrazilianBodyWave extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
+      type: 'body-wave',
       length : '',
       quantity: '',
     };
@@ -87,27 +88,35 @@ class BrazilianBodyWave extends React.Component {
               </ul>
           Note: Excessive heat/color can damage texture and curl pattern of your bundles. 
             </h5>
-            <div className="fb-share-button" data-href="https://www.hairbyadara.com/brazilian/body-wave" data-layout="button" data-size="small" data-mobile-iframe="true" id="share-links">
+            <div className="fb-share-button" data-to="https://www.hairbyadara.com/brazilian/body-wave" data-layout="button" data-size="small" data-mobile-iframe="true" id="share-links">
               <h3>Share this product</h3>
-              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hairbyadara.com%2Fbrazilian%2Fbody-wave&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore">Share</a>
-              <a target="_blank" href="//twitter.com/share?text=Brazilian%20Mink%20Body%20Wave&amp;url=https://www.hairbyadara.com/products/brazilian-body-wave" className="share-twitter">Tweet</a>
-              <a target="_blank" href="//pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/products/brazilian-body-wave&amp;media=http://cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336&amp;description=Brazilian%20Mink%20Body%20Wave" className="share-pinterest">Pin it</a>
-              <a target="_blank" href="//fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/products/brazilian-body-wave&amp;Title=Brazilian%20Mink%20Body%20Wave&amp;Category=Other&amp;ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336" className="share-fancy">Fancy</a>
-              <a target="_blank" href="//plus.google.com/share?url=https://www.hairbyadara.com/products/brazilian-body-wave" className="share-google">+1</a>
+              <BrowserRouter>
+                <React.Fragment>
+                  <Link target="_blank" to="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hairbyadara.com%2Fbrazilian%2Fbody-wave&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore">Share</Link>
+                  <Link target="_blank" to="//twitter.com/share?text=Brazilian%20Mink%20Body%20Wave&amp;url=https://www.hairbyadara.com/products/brazilian-body-wave" className="share-twitter">Tweet</Link>
+                  <Link target="_blank" to="//pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/products/brazilian-body-wave&amp;media=http://cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336&amp;description=Brazilian%20Mink%20Body%20Wave" className="share-pinterest">Pin it</Link>
+                  <Link target="_blank" to="//fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/products/brazilian-body-wave&amp;Title=Brazilian%20Mink%20Body%20Wave&amp;Category=Other&amp;ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336" className="share-fancy">Fancy</Link>
+                  <Link target="_blank" to="//plus.google.com/share?url=https://www.hairbyadara.com/products/brazilian-body-wave" className="share-google">+1</Link>
+                </React.Fragment>
+              </BrowserRouter>
             </div>
           </div>
         </div>
 
         <div id="brazilian-collection-pic1">
           <h3>More from this collection</h3>
-          <div className="brazilian-collection">
-            <a href="https://www.hairbyadara.com/brazilian/staight"><img src={straightBundlePic} width="350" height="350"/></a>
-            <p>Brazilian Mink Straight</p>
-          </div>
-          <div className="brazilian-collection">
-            <a href="https://www.hairbyadara.com/brazilian/kinky-curl"><img src={kinkyCurlPic} width="350" height="350"/></a>
-            <p>Brazilian Kinky Curl</p>
-          </div>
+          <BrowserRouter>
+            <React.Fragment>
+              <div className="brazilian-collection">
+                <Link to ="https://www.hairbyadara.com/brazilian/staight"><img src={straightBundlePic} width="350" height="350"/></Link>
+                <p>Brazilian Mink Straight</p>
+              </div>
+              <div className="brazilian-collection">
+                <Link to ="https://www.hairbyadara.com/brazilian/kinky-curl"><img src={kinkyCurlPic} width="350" height="350"/></Link>
+                <p>Brazilian Kinky Curl</p>
+              </div>
+            </React.Fragment>
+          </BrowserRouter>
         </div>
       </div>
     );

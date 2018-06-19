@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, BrowserRouter } from 'react-router-dom';
 import './style.scss';
 import straightClosure from '../../../images/straight-closure.JPG';
 import straightFrontal from '../../../images/straight-frontal.JPG';
@@ -73,32 +74,40 @@ class StraightFrontal extends React.Component {
             <br/>
           Silk closures have a layer of silk as well as a layer of lace. Silk closures tend to be a little thicker than lace, but have more realistic scalp-like appearance due to the silk fabric. Silk closures provides a more natural "scalp". The "scalp" on the silk base closure is more human like than that of a lace closure, therefore requiring less preparation. Hair is individually implanted into the base, knotted, and secured with a strong adhesive. Closures are a great way to protect your natural hair from heat and or inclement weather. The measurement of our closures is the standard size of 4"x4". We carry 12", 14", 16" in stock (18" and 20" available upon request.)
           </h5>
-          <div className="fb-share-button" data-href="https://www.hairbyadara.com/closures/straight-frontal" data-layout="button" data-size="small" data-mobile-iframe="true">
-            <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closures/straight-frontal" className="fb-xfbml-parse-ignore">Share</a>
-            <a target="_blank" href="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closures/straight-frontal" className="share-twitter">Tweet</a>
-            <a target="_blank" href="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closures/straight-frontal" className="share-pinterest">Pin it</a>
-            <a target="_blank" href="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closures/straight-frontal" className="share-fancy">Fancy</a>
-            <a target="_blank" href="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/straight-frontal" className="share-google">+1</a>
+          <div className="fb-share-button" data-to="https://www.hairbyadara.com/closures/straight-frontal" data-layout="button" data-size="small" data-mobile-iframe="true">
+            <BrowserRouter>
+              <React.Fragment>
+                <Link target="_blank" to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closures/straight-frontal" className="fb-xfbml-parse-ignore">Share</Link>
+                <Link target="_blank" to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closures/straight-frontal" className="share-twitter">Tweet</Link>
+                <Link target="_blank" to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closures/straight-frontal" className="share-pinterest">Pin it</Link>
+                <Link target="_blank" to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closures/straight-frontal" className="share-fancy">Fancy</Link>
+                <Link target="_blank" to="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/straight-frontal" className="share-google">+1</Link>
+              </React.Fragment>
+            </BrowserRouter>
           </div>
         </div>
         <div id="options-container">
           <h3>More from this collection</h3>
-          <div className="closure-frontal-collection">
-            <a href="https://www.hairbyadara.com/closures/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic4" width="100%" height="100%"/></a>
-            <p>Brazilian Body Wave Closure</p>
-          </div>
-          <div className="closure-frontal-collection">
-            <a href="https://www.hairbyadara.com/closures/kinky-curl-closure"><img src={kinkyClosure} id="kc-collection-pic4" width="100%" height="100%"/></a>
-            <p>Brazilian Kinky Curl Closure</p>
-          </div>
-          <div className="closure-frontal-collection">
-            <a href="https://www.hairbyadara.com/closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kf-collection-pic4"width="100%" height="100%"/></a>
-            <p>Brazilian Kinky Curl Frontal</p>
-          </div>
-          <div className="closure-frontal-collection">
-            <a href="https://www.hairbyadara.com/closures/straight-closure"><img src={straightClosure} id="sc-collection-pic4" width="100%" height="100%"/></a>
-            <p>Brazilian Mink Straight Closure</p>
-          </div>
+          <BrowserRouter>
+            <React.Fragment>
+              <div className="closure-frontal-collection">
+                <Link to ="https://www.hairbyadara.com/closures/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic4" width="100%" height="100%"/></Link>
+                <p>Brazilian Body Wave Closure</p>
+              </div>
+              <div className="closure-frontal-collection">
+                <Link to ="https://www.hairbyadara.com/closures/kinky-curl-closure"><img src={kinkyClosure} id="kc-collection-pic4" width="100%" height="100%"/></Link>
+                <p>Brazilian Kinky Curl Closure</p>
+              </div>
+              <div className="closure-frontal-collection">
+                <Link to ="https://www.hairbyadara.com/closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kf-collection-pic4"width="100%" height="100%"/></Link>
+                <p>Brazilian Kinky Curl Frontal</p>
+              </div>
+              <div className="closure-frontal-collection">
+                <Link to ="https://www.hairbyadara.com/closures/straight-closure"><img src={straightClosure} id="sc-collection-pic4" width="100%" height="100%"/></Link>
+                <p>Brazilian Mink Straight Closure</p>
+              </div>
+            </React.Fragment>
+          </BrowserRouter>
         </div>
       </div>
     );

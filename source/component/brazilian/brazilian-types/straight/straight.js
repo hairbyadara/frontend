@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link, BrowserRouter} from 'react-router-dom';
 import './styles.scss';
 import straightPic from '../../../images/straight-3-bundles.JPG';
 import kinkyPic from '../../../images/kinky-curl-3–bundles.JPG';
@@ -86,25 +87,33 @@ class BrazilianStraight extends React.Component {
             </ul>
           Note: Excessive heat/color can damage texture and curl pattern of your bundles. 
           </h5>
-          <div className="fb-share-button" data-href="https://www.hairbyadara.com/brazilian/straight" data-layout="button" data-size="small" data-mobile-iframe="true">
+          <div className="fb-share-button" data-to="https://www.hairbyadara.com/brazilian/straight" data-layout="button" data-size="small" data-mobile-iframe="true">
             <h3>Share this product </h3>
-            <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-straight" className="fb-xfbml-parse-ignore">Share</a>
-            <a target="_blank" href="https://twitter.com/share?text=Brazilian%20Mink%20Straight&url=https://www.hairbyadara.com/brazilian-straight" className="share-twitter">Tweet</a>
-            <a target="_blank" href="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-straight&media=http://cdn.shopify.com/s/files/1/1235/5700/products/imageedit_4_8203888054_1024x1024.jpg?v=1476923593&description=Brazilian%20Mink%20Straight" className="share-pinterest">Pin it</a>
-            <a target="_blank" href="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-straight&Title=Brazilian%20Mink%20Straight&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/imageedit_4_8203888054_1024x1024.jpg?v=1476923593" className="share-fancy">Fancy</a>
-            <a target="_blank" href="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-straight" className="share-google">+1</a>
+            <BrowserRouter>
+              <React.Fragment>
+                <Link target="_blank" to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-straight" className="fb-xfbml-parse-ignore">Share</Link>
+                <Link target="_blank" to="https://twitter.com/share?text=Brazilian%20Mink%20Straight&url=https://www.hairbyadara.com/brazilian-straight" className="share-twitter">Tweet</Link>
+                <Link target="_blank" to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-straight&media=http://cdn.shopify.com/s/files/1/1235/5700/products/imageedit_4_8203888054_1024x1024.jpg?v=1476923593&description=Brazilian%20Mink%20Straight" className="share-pinterest">Pin it</Link>
+                <Link target="_blank" to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-straight&Title=Brazilian%20Mink%20Straight&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/imageedit_4_8203888054_1024x1024.jpg?v=1476923593" className="share-fancy">Fancy</Link>
+                <Link target="_blank" to="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-straight" className="share-google">+1</Link>
+              </React.Fragment>
+            </BrowserRouter>
           </div>
         </div>
         <div id="brazilian-collection-pic2">
-          <div className="brazilian-collection">
-            <h3>More from this collection</h3>
-            <a href="https://www.hairbyadara.com/brazilian/straight"><img src={kinkyPic} width="350" height="350"/></a>
-            <p>Brazilian Kinky Curl</p>
-          </div>
-          <div className="brazilian-collection">
-            <a href="https://www.hairbyadara.com/brazilian/body-wave"><img src={bodyWavePic} width="350" height="350"/></a>
-            <p>Brazilian Mink Body-Wave</p>
-          </div>
+          <BrowserRouter>
+            <React.Fragment>
+              <div className="brazilian-collection">
+                <h3>More from this collection</h3>
+                <Link to="https://www.hairbyadara.com/brazilian/straight"><img src={kinkyPic} width="350" height="350"/></Link>
+                <p>Brazilian Kinky Curl</p>
+              </div>
+              <div className="brazilian-collection">
+                <Link to="https://www.hairbyadara.com/brazilian/body-wave"><img src={bodyWavePic} width="350" height="350"/></Link>
+                <p>Brazilian Mink Body-Wave</p>
+              </div>
+            </React.Fragment>
+          </BrowserRouter>
         </div>
       </div>
     );

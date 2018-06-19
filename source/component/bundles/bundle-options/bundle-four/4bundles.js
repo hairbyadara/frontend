@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, BrowserRouter } from 'react-router-dom';
 import './styles.scss';
 import bundlePic from '../../../images/spiral-curl-five-bundles.JPG';
 import { connect } from 'react-redux';
@@ -10,10 +11,10 @@ class FourBundle extends React.Component {
     super(props);
     this.state = { 
       texture: '',
-      lengthOne: '',
-      lengthTwo: '',
-      lengthThree: '',
-      lengthFour: '',
+      priceOne: '',
+      priceTwo: '',
+      priceThree: '',
+      priceFour: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,10 +24,14 @@ class FourBundle extends React.Component {
     this.props.cartItemCartCreate(this.state);
   }
   handleChange(event){
+    console.log(event.target);
+    // console.log(this.state);
+    
     this.setState({[event.target.name]: event.target.value});
   }
   render() { 
-    console.log(this.state);
+    // console.log(this.props);
+    
     return ( 
       <div>
         <div id="five-bundle-main">
@@ -42,67 +47,71 @@ class FourBundle extends React.Component {
                 <option value="straight">Brazilian Mink Straight</option>
                 <option value="body-wave">Brazilian Mink Body Wave</option>
               </select>
-              <select name="lengthOne" id="lengthOne" onChange={this.handleChange} required>
+              <select name="priceOne" id="priceOne" onChange={this.handleChange} required>
                 <option value="" defaultValue>Select length</option>
-                <option value="12in">12" $ 65.00 </option>
-                <option value="14in">14" $ 70.00 </option>
-                <option value="16in">16" $ 75.00 </option>
-                <option value="18in">18" $ 80.00 </option>
-                <option value="20in">20" $ 85.00 </option>
-                <option value="22in">22" $ 90.00 </option>
-                <option value="24in">24" $ 95.00 </option>
-                <option value="26in">26" $ 100.00 </option>
-                <option value="28in">28" $ 105.00 </option>
-                <option value="30in">30" $ 110.00 </option>
+                <option name="12in" value="65">12" $ 65.00 </option>
+                <option name="14in" value="70">14" $ 70.00 </option>
+                <option name="16in" value="75">16" $ 75.00 </option>
+                <option name="18in" value="80">18" $ 80.00 </option>
+                <option name="20in" value="85">20" $ 85.00 </option>
+                <option name="22in" value="90">22" $ 90.00 </option>
+                <option name="24in" value="95">24" $ 95.00 </option>
+                <option name="26in" value="100">26" $ 100.00 </option>
+                <option name="28in" value="105">28" $ 105.00 </option>
+                <option name="30in" value="110">30" $ 110.00 </option>
               </select>
-              <select name="lengthTwo" id="lengthTwo" onChange={this.handleChange} required>
+              <select name="priceTwo" id="priceTwo" onChange={this.handleChange} required>
                 <option value="" defaultValue>Select length</option>
-                <option value="12in">12" $ 65.00 </option>
-                <option value="14in">14" $ 70.00 </option>
-                <option value="16in">16" $ 75.00 </option>
-                <option value="18in">18" $ 80.00 </option>
-                <option value="20in">20" $ 85.00 </option>
-                <option value="22in">22" $ 90.00 </option>
-                <option value="24in">24" $ 95.00 </option>
-                <option value="26in">26" $ 100.00 </option>
-                <option value="28in">28" $ 105.00 </option>
-                <option value="30in">30" $ 110.00 </option>
+                <option name="12in" value="65">12" $ 65.00 </option>
+                <option name="14in" value="70">14" $ 70.00 </option>
+                <option name="16in" value="75">16" $ 75.00 </option>
+                <option name="18in" value="80">18" $ 80.00 </option>
+                <option name="20in" value="85">20" $ 85.00 </option>
+                <option name="22in" value="90">22" $ 90.00 </option>
+                <option name="24in" value="95">24" $ 95.00 </option>
+                <option name="26in" value="100">26" $ 100.00 </option>
+                <option name="28in" value="105">28" $ 105.00 </option>
+                <option name="30in" value="110">30" $ 110.00 </option>
               </select>
-              <select name="lengthThree" id="lengthThree" onChange={this.handleChange} required>
+              <select name="priceThree" id="priceThree" onChange={this.handleChange} required>
                 <option value="" defaultValue>Select length</option>
-                <option value="12in">12" $ 65.00 </option>
-                <option value="14in">14" $ 70.00 </option>
-                <option value="16in">16" $ 75.00 </option>
-                <option value="18in">18" $ 80.00 </option>
-                <option value="20in">20" $ 85.00 </option>
-                <option value="22in">22" $ 90.00 </option>
-                <option value="24in">24" $ 95.00 </option>
-                <option value="26in">26" $ 100.00 </option>
-                <option value="28in">28" $ 105.00 </option>
-                <option value="30in">30" $ 110.00 </option>
+                <option name="12in" value="65">12" $ 65.00 </option>
+                <option name="14in" value="70">14" $ 70.00 </option>
+                <option name="16in" value="75">16" $ 75.00 </option>
+                <option name="18in" value="80">18" $ 80.00 </option>
+                <option name="20in" value="85">20" $ 85.00 </option>
+                <option name="22in" value="90">22" $ 90.00 </option>
+                <option name="24in" value="95">24" $ 95.00 </option>
+                <option name="26in" value="100">26" $ 100.00 </option>
+                <option name="28in" value="105">28" $ 105.00 </option>
+                <option name="30in" value="110">30" $ 110.00 </option>
               </select>
-              <select name="lengthFour" id="lengthFour" onChange={this.handleChange} required>
+              <select name="priceFour" id="priceFour" onChange={this.handleChange} required>
                 <option value="" defaultValue>Select length</option>
-                <option value="12in">12" $ 65.00 </option>
-                <option value="14in">14" $ 70.00 </option>
-                <option value="16in">16" $ 75.00 </option>
-                <option value="18in">18" $ 80.00 </option>
-                <option value="20in">20" $ 85.00 </option>
-                <option value="22in">22" $ 90.00 </option>
-                <option value="24in">24" $ 95.00 </option>
-                <option value="26in">26" $ 100.00 </option>
-                <option value="28in">28" $ 105.00 </option>
-                <option value="30in">30" $ 110.00 </option>
+                <option name="12in" value="65">12" $ 65.00 </option>
+                <option name="14in" value="70">14" $ 70.00 </option>
+                <option name="16in" value="75">16" $ 75.00 </option>
+                <option name="18in" value="80">18" $ 80.00 </option>
+                <option name="20in" value="85">20" $ 85.00 </option>
+                <option name="22in" value="90">22" $ 90.00 </option>
+                <option name="24in" value="95">24" $ 95.00 </option>
+                <option name="26in" value="100">26" $ 100.00 </option>
+                <option name="28in" value="105">28" $ 105.00 </option>
+                <option name="30in" value="110">30" $ 110.00 </option>
               </select>
               <button type="submit" id="four-bundle-button"><span>Add to Cart</span></button>
             </form>
-            <div className="fb-share-button" data-href="https://www.hairbyadara.com/bundles/4-bundles" data-layout="button" data-size="small" data-mobile-iframe="true">
+            <div className="fb-share-button" data-to="https://www.hairbyadara.com/bundles/4-bundles" data-layout="button" data-size="small" data-mobile-iframe="true">
               <h3>Share this product</h3>
-              <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/bundles/4-bundles" className="fb-xfbml-parse-ignore">Share</a>
-              <a target="_blank" href="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/bundles/4-bundles" className="share-twitter">Tweet</a>
-              <a target="_blank" href="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/bundles/4-bundles&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" className="share-pinterest">Pin it</a>
-              <a target="_blank" href="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/bundles/4-bundles&Title=Brazilian%20Kinky%20Curl&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" className="share-fancy">Fancy</a>
-              <a target="_blank" href="https://plus.google.com/share?url=https://www.hairbyadara.com/bundles/4-bundles" className="share-google">+1</a>
+              <BrowserRouter>
+                <React.Fragment>
+                  <Link target="_blank" to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/bundles/4-bundles" className="fb-xfbml-parse-ignore">Share</Link>
+                  <Link target="_blank" to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/bundles/4-bundles" className="share-twitter">Tweet</Link>
+                  <Link target="_blank" to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/bundles/4-bundles&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" className="share-pinterest">Pin it</Link>
+                  <Link target="_blank" to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/bundles/4-bundles&Title=Brazilian%20Kinky%20Curl&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" className="share-fancy">Fancy</Link>
+                  <Link target="_blank" to="https://plus.google.com/share?url=https://www.hairbyadara.com/bundles/4-bundles" className="share-google">+1</Link>
+                </React.Fragment>
+              </BrowserRouter>
             </div>
           </div>
         </div>
