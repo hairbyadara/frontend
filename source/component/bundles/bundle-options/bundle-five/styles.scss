@@ -1,0 +1,23 @@
+#five-bundle-main {
+  margin-left: 13%;
+}
+
+#col1,
+#col2 {
+  display: inline-block;
+  position: relative;
+  width: 49%;
+  margin: 0;
+  padding: 0;
+  // border: 2px black solid;
+}
+
+#col1 {
+  float: left;
+}
+#col2 {
+  float: right;
+}
+.five-bundle-button {
+   margin: 0;
+ }
