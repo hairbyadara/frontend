@@ -2,12 +2,22 @@ html {
   margin-left: 3%;
   margin-right: 3%;
 }
+.main-page {
+  color: goldenrod;
+}
 
 footer {
   margin-top: 15%;
-  margin-left: 10%;
-  margin-right: 10%;
 }
+
 select {
   display: block;
+}
+
+p , select, button{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+p , select {
+  padding: 0;
 }

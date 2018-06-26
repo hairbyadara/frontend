@@ -28,7 +28,7 @@ export default class App extends React.Component {
   componentDidMount() {
     store.subscribe(() => console.log('__STATE__:', store.getState()));
   }
-  render() { 
+  render() {
     return (
       <div className='app'>
         <Provider store={store}>
@@ -51,7 +51,7 @@ export default class App extends React.Component {
               <Route exact path='/closures/straight-frontal' component={StraightFrontal}/>
               <Route exact path='/bundles' component={Bundles}/>
               <Route exact path='/bundles/4-bundles' component={FourBundle}/>
-              <Route exact path='/bundles/5-bundles' component={FiveBundle}/>              
+              <Route exact path='/bundles/5-bundles' component={FiveBundle}/>
               <Route exact path='/cart' component={Cart}/>
               <Footer />
             </React.Fragment>

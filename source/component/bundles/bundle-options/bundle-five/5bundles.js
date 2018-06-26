@@ -113,15 +113,11 @@ class FiveBundle extends React.Component {
             </form>
             <div className="fb-share-button" data-to="https://www.hairbyadara.com/bundles/5-bundles" data-layout="button" data-size="small" data-mobile-iframe="true">
               <h3>Share this product</h3>
-              <BrowserRouter>
-                <React.Fragment>
-                  <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/bundles/5-bundles" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
-                  <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/bundles/5-bundles" target="_blank" className="share-twitter">Tweet</Link>
-                  <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/bundles/5-bundles&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" target="_blank" className="share-pinterest">Pin it</Link>
-                  <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/bundles/5-bundles&Title=Brazilian%20Kinky%20Curl&cart=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" target="_blank" className="share-fancy">Fancy</Link>
-                  <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/bundles/5-bundles" target="_blank" className="share-google">+1</Link>
-                </React.Fragment>
-              </BrowserRouter>
+              <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/bundles/5-bundles" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
+              <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/bundles/5-bundles" target="_blank" className="share-twitter">Tweet</Link>
+              <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/bundles/5-bundles&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" target="_blank" className="share-pinterest">Pin it</Link>
+              <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/bundles/5-bundles&Title=Brazilian%20Kinky%20Curl&cart=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" target="_blank" className="share-fancy">Fancy</Link>
+              <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/bundles/5-bundles" target="_blank" className="share-google">+1</Link>
             </div>
           </div>
         </div>

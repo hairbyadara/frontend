@@ -12,37 +12,34 @@ class Closures extends React.Component {
     super(props);
     this.state = {  };
   }
-  render() { 
-    return ( 
+  render() {
+    return (
       <div>
         <h1>Closures</h1>
-        <BrowserRouter>
-          <React.Fragment>
-            <div className="box box2">
-              <Link to="closures/straight-closure"><img src={straightClosure} id="straight-closure" width="100%" height="100%"/></Link>
-              <h3>Brazilian Mink Straight Closure</h3>
-            </div>
-            <div className="box">
-              <Link to="closures/straight-frontal"><img src={straightFrontal} id="straight-frontal" width="100%" height="100%"/></Link>
-              <h3>Brazilian Mink Straight Frontal</h3>
-            </div>
-            <div className="box">
-              <Link to="closures/body-wave-closure"><img src={bodyWaveClosure} id="bodywave-closure" width="100%" height="100%"/></Link>
-              <h3>Brazilian Mink Body Wave Closure</h3>
-            </div>
-            <div className="box">
-              <Link to="closures/kinky-curl-closure"><img src={kinkyClosure} id="kinky-closure" width="100%" height="100%"/></Link>
-              <h3>Brazilian Kinky Curl Closure</h3>
-            </div>
-            <div className="box">
-              <Link to="closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kinky-frontal" width="100%" height="100%"/></Link>
-              <h3>Brazilian Kinky Curl Frontal</h3>
-            </div>
-          </React.Fragment>
-        </BrowserRouter>
+        <div className="box box2">
+          <Link to="closures/straight-closure"><img src={straightClosure} id="straight-closure" width="100%" height="100%"/></Link>
+          <h3>Brazilian Mink Straight Closure</h3>
+        </div>
+        <div className="box">
+          <Link to="closures/straight-frontal"><img src={straightFrontal} id="straight-frontal" width="100%" height="100%"/></Link>
+          <h3>Brazilian Mink Straight Frontal</h3>
+        </div>
+        <div className="box">
+          <Link to="closures/body-wave-closure"><img src={bodyWaveClosure} id="bodywave-closure" width="100%" height="100%"/></Link>
+          <h3>Brazilian Mink Body Wave Closure</h3>
+        </div>
+        <div className="box">
+          <Link to="closures/kinky-curl-closure"><img src={kinkyClosure} id="kinky-closure" width="100%" height="100%"/></Link>
+          <h3>Brazilian Kinky Curl Closure</h3>
+        </div>
+        <div className="box">
+          <Link to="closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kinky-frontal" width="100%" height="100%"/></Link>
+          <h3>Brazilian Kinky Curl Frontal</h3>
+        </div>
+
       </div>
     );
   }
 }
- 
+
 export default Closures;

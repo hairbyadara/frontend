@@ -13,10 +13,11 @@ import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
 class StraightFrontal extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       length : '',
       type: '',
       quantity: '',
+      item: 'straight-frontal',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,11 +29,11 @@ class StraightFrontal extends React.Component {
   handleChange(event){
     this.setState({[event.target.name]: event.target.value});
   }
-  render() { 
-    return ( 
+  render() {
+    return (
       <div>
         <div id="straight-frontal-pic">
-          <img src={straightFrontal} width="100%" height="100%"/>
+          <img src={straightFrontal} width="80%" height="80%"/>
         </div>
         <div id="straight-frontal-info">
           <h1>Brazilian Mink Straight Frontal</h1>
@@ -75,39 +76,31 @@ class StraightFrontal extends React.Component {
           Silk closures have a layer of silk as well as a layer of lace. Silk closures tend to be a little thicker than lace, but have more realistic scalp-like appearance due to the silk fabric. Silk closures provides a more natural "scalp". The "scalp" on the silk base closure is more human like than that of a lace closure, therefore requiring less preparation. Hair is individually implanted into the base, knotted, and secured with a strong adhesive. Closures are a great way to protect your natural hair from heat and or inclement weather. The measurement of our closures is the standard size of 4"x4". We carry 12", 14", 16" in stock (18" and 20" available upon request.)
           </h5>
           <div className="fb-share-button" data-to="https://www.hairbyadara.com/closures/straight-frontal" data-layout="button" data-size="small" data-mobile-iframe="true">
-            <BrowserRouter>
-              <React.Fragment>
-                <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closures/straight-frontal" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
-                <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closures/straight-frontal" target="_blank" className="share-twitter">Tweet</Link>
-                <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closures/straight-frontal" target="_blank" className="share-pinterest">Pin it</Link>
-                <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closures/straight-frontal" target="_blank" className="share-fancy">Fancy</Link>
-                <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/straight-frontal" target="_blank" className="share-google">+1</Link>
-              </React.Fragment>
-            </BrowserRouter>
+            <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closures/straight-frontal" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
+            <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closures/straight-frontal" target="_blank" className="share-twitter">Tweet</Link>
+            <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closures/straight-frontal" target="_blank" className="share-pinterest">Pin it</Link>
+            <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closures/straight-frontal" target="_blank" className="share-fancy">Fancy</Link>
+            <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/straight-frontal" target="_blank" className="share-google">+1</Link>
           </div>
         </div>
         <div id="options-container">
           <h3>More from this collection</h3>
-          <BrowserRouter>
-            <React.Fragment>
-              <div className="closure-frontal-collection">
-                <Link to="https://www.hairbyadara.com/closures/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic4" width="100%" height="100%"/></Link>
-                <p>Brazilian Body Wave Closure</p>
-              </div>
-              <div className="closure-frontal-collection">
-                <Link to="https://www.hairbyadara.com/closures/kinky-curl-closure"><img src={kinkyClosure} id="kc-collection-pic4" width="100%" height="100%"/></Link>
-                <p>Brazilian Kinky Curl Closure</p>
-              </div>
-              <div className="closure-frontal-collection">
-                <Link to="https://www.hairbyadara.com/closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kf-collection-pic4"width="100%" height="100%"/></Link>
-                <p>Brazilian Kinky Curl Frontal</p>
-              </div>
-              <div className="closure-frontal-collection">
-                <Link to="https://www.hairbyadara.com/closures/straight-closure"><img src={straightClosure} id="sc-collection-pic4" width="100%" height="100%"/></Link>
-                <p>Brazilian Mink Straight Closure</p>
-              </div>
-            </React.Fragment>
-          </BrowserRouter>
+          <div className="closure-frontal-collection">
+            <Link to="/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic4" width="100%" height="100%"/></Link>
+            <p>Brazilian Body Wave Closure</p>
+          </div>
+          <div className="closure-frontal-collection">
+            <Link to="../closures/kinky-curl-closure"><img src={kinkyClosure} id="kc-collection-pic4" width="100%" height="100%"/></Link>
+            <p>Brazilian Kinky Curl Closure</p>
+          </div>
+          <div className="closure-frontal-collection">
+            <Link to="../closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kf-collection-pic4"width="100%" height="100%"/></Link>
+            <p>Brazilian Kinky Curl Frontal</p>
+          </div>
+          <div className="closure-frontal-collection">
+            <Link to="../closures/straight-closure"><img src={straightClosure} id="sc-collection-pic4" width="100%" height="100%"/></Link>
+            <p>Brazilian Mink Straight Closure</p>
+          </div>
         </div>
       </div>
     );

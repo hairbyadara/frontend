@@ -11,7 +11,8 @@ import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
 class BrazilianStraight extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
+      type: 'brazilian straight',
       length : '',
       quantity: '',
     };
@@ -25,8 +26,8 @@ class BrazilianStraight extends React.Component {
   handleChange(event){
     this.setState({[event.target.name]: event.target.value});
   }
-  render() { 
-    return ( 
+  render() {
+    return (
       <div>
         <div id="col1-straight">
           <img src={straightPic} width="90%" height="75%"/>
@@ -70,7 +71,7 @@ class BrazilianStraight extends React.Component {
               Grade 7A Virgin Remy hair
               </li>
               <li>
-              Natural (1B) color; No two bundles are identical   
+              Natural (1B) color; No two bundles are identical
               </li>
               <li>
               3.5-4.0 oz per bundle
@@ -79,41 +80,33 @@ class BrazilianStraight extends React.Component {
               No shedding and tangle-free
               </li>
               <li>
-              All bundles can be cut, colored, bleached, and straightened (we recommend a professional for coloring.) 
+              All bundles can be cut, colored, bleached, and straightened (we recommend a professional for coloring.)
               </li>
               <li>
               Can last 12-18 months with proper care
               </li>
             </ul>
-          Note: Excessive heat/color can damage texture and curl pattern of your bundles. 
+          Note: Excessive heat/color can damage texture and curl pattern of your bundles.
           </h5>
           <div className="fb-share-button" data-to="https://www.hairbyadara.com/brazilian/straight" data-layout="button" data-size="small" data-mobile-iframe="true">
             <h3>Share this product </h3>
-            <BrowserRouter>
-              <React.Fragment>
-                <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-straight" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
-                <Link to="https://twitter.com/share?text=Brazilian%20Mink%20Straight&url=https://www.hairbyadara.com/brazilian-straight" target="_blank" className="share-twitter">Tweet</Link>
-                <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-straight&media=http://cdn.shopify.com/s/files/1/1235/5700/products/imageedit_4_8203888054_1024x1024.jpg?v=1476923593&description=Brazilian%20Mink%20Straight" target="_blank" className="share-pinterest">Pin it</Link>
-                <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-straight&Title=Brazilian%20Mink%20Straight&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/imageedit_4_8203888054_1024x1024.jpg?v=1476923593" target="_blank" className="share-fancy">Fancy</Link>
-                <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-straight" target="_blank" className="share-google">+1</Link>
-              </React.Fragment>
-            </BrowserRouter>
+            <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-straight" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
+            <Link to="https://twitter.com/share?text=Brazilian%20Mink%20Straight&url=https://www.hairbyadara.com/brazilian-straight" target="_blank" className="share-twitter">Tweet</Link>
+            <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-straight&media=http://cdn.shopify.com/s/files/1/1235/5700/products/imageedit_4_8203888054_1024x1024.jpg?v=1476923593&description=Brazilian%20Mink%20Straight" target="_blank" className="share-pinterest">Pin it</Link>
+            <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-straight&Title=Brazilian%20Mink%20Straight&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/imageedit_4_8203888054_1024x1024.jpg?v=1476923593" target="_blank" className="share-fancy">Fancy</Link>
+            <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-straight" target="_blank" className="share-google">+1</Link>
           </div>
         </div>
-        <div id="brazilian-collection-pic2">
-          <BrowserRouter>
-            <React.Fragment>
-              <div className="brazilian-collection">
-                <h3>More from this collection</h3>
-                <Link to="https://www.hairbyadara.com/brazilian/straight"><img src={kinkyPic} width="350" height="350"/></Link>
-                <p>Brazilian Kinky Curl</p>
-              </div>
-              <div className="brazilian-collection">
-                <Link to="https://www.hairbyadara.com/brazilian/body-wave"><img src={bodyWavePic} width="350" height="350"/></Link>
-                <p>Brazilian Mink Body-Wave</p>
-              </div>
-            </React.Fragment>
-          </BrowserRouter>
+        <h3>More from this collection</h3>
+        <div className="brazilian-collection-pic">
+          <div className="brazilian-collection">
+            <Link to="../brazilian/kinky-curl"><img src={kinkyPic} width="350" height="350"/></Link>
+            <p>Brazilian Kinky Curl</p>
+          </div>
+          <div className="brazilian-collection">
+            <Link to="../brazilian/body-wave"><img src={bodyWavePic} width="350" height="350"/></Link>
+            <p>Brazilian Mink Body-Wave</p>
+          </div>
         </div>
       </div>
     );

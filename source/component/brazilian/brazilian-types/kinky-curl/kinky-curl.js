@@ -11,7 +11,8 @@ import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
 class BrazilianKinkyCurl extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
+      type:'brazilian kinky-curl',
       length : '',
       quantity: '',
     };
@@ -25,11 +26,11 @@ class BrazilianKinkyCurl extends React.Component {
   handleChange(event){
     this.setState({[event.target.name]: event.target.value});
   }
-  render() { 
-    return ( 
+  render() {
+    return (
       <div>
         <div id="col1-kc">
-          <img src={bkcPic} id="kc-image" width="90%" height="52%"/>
+          <img src={bkcPic} id="kc-image" width="100%" height="70%"/>
         </div>
         <div id="col2-kc">
           <h1>Brazilian Kinky Curl</h1>
@@ -71,7 +72,7 @@ class BrazilianKinkyCurl extends React.Component {
               Grade 7A Virgin Remy hair
               </li>
               <li>
-              Natural (1B) color; No two bundles are identical   
+              Natural (1B) color; No two bundles are identical
               </li>
               <li>
               3.5-4.0 oz per bundle
@@ -83,41 +84,33 @@ class BrazilianKinkyCurl extends React.Component {
               Minimal shedding and tangle-free
               </li>
               <li>
-              All bundles can be cut, colored, bleached, and straightened (we recommend a professional for coloring.) 
+              All bundles can be cut, colored, bleached, and straightened (we recommend a professional for coloring.)
               </li>
               <li>
               Can last 12-18 months with proper care
               </li>
             </ul>
-          Note: Excessive heat/color can damage texture and curl pattern of your bundles. 
+          Note: Excessive heat/color can damage texture and curl pattern of your bundles.
           </h5>
           <div className="fb-share-button" data-to="https://www.hairbyadara.com/brazilian/kinky-curl" data-layout="button" data-size="small" data-mobile-iframe="true">
             <h3>Share this product</h3>
-            <BrowserRouter>
-              <React.Fragment>
-                <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
-                <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="share-twitter">Tweet</Link>
-                <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-kinky-curl&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" target="_blank" className="share-pinterest">Pin it</Link>
-                <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-kinky-curl&Title=Brazilian%20Kinky%20Curl&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" target="_blank" className="share-fancy">Fancy</Link>
-                <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="share-google">+1</Link>
-              </React.Fragment>
-            </BrowserRouter>
+            <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
+            <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="share-twitter">Tweet</Link>
+            <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-kinky-curl&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" target="_blank" className="share-pinterest">Pin it</Link>
+            <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-kinky-curl&Title=Brazilian%20Kinky%20Curl&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" target="_blank" className="share-fancy">Fancy</Link>
+            <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="share-google">+1</Link>
           </div>
         </div>
-        <div id="brazilian-collection-pic3">
-          <h3>More from this collection</h3>
-          <BrowserRouter>
-            <React.Fragment>
-              <div className="brazilian-collection">
-                <Link to="https://www.hairbyadara.com/brazilian/straight"><img src={bwPic} width="350" height="350"/></Link>
-                <p>Brazilian Mink Straight</p>
-              </div>
-              <div className="brazilian-collection">
-                <Link to="https://www.hairbyadara.com/brazilian/body-wave"><img src={sPic} width="350" height="350"/></Link>
-                <p>Brazilian Mink Body-Wave</p>
-              </div>
-            </React.Fragment>
-          </BrowserRouter>
+        <h3>More from this collection</h3>
+        <div className="brazilian-collection-pic">
+          <div className="brazilian-collection">
+            <Link to="../brazilian/straight"><img src={sPic} width="350" height="350"/></Link>
+            <p>Brazilian Mink Straight</p>
+          </div>
+          <div className="brazilian-collection">
+            <Link to="../brazilian/body-wave"><img src={bwPic} width="350" height="350"/></Link>
+            <p>Brazilian Mink Body-Wave</p>
+          </div>
         </div>
       </div>
     );

@@ -9,7 +9,7 @@ import slide5 from '../images/slide_5.jpg';
 
 
 export default class Carousel extends React.Component {
-  render() {    
+  render() {
     const settings = {
       dots: true,
       infinite: true,

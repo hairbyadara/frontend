@@ -12,7 +12,7 @@ import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
 class StraightClosure extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       length: '',
       type: '',
       quantity: '',
@@ -28,8 +28,8 @@ class StraightClosure extends React.Component {
     event.preventDefault();
     this.props.cartItemCartCreate(this.state);
   }
-  render() { 
-    return ( 
+  render() {
+    return (
       <div>
         <div id="straight-closure-pic">
           <img src={straightClosure} width="100%" height="100%"/>
@@ -78,39 +78,31 @@ class StraightClosure extends React.Component {
           </h5>
           <div className="fb-share-button" data-href="https://www.hairbyadara.com/closure/straight-closure" data-layout="button" data-size="small" data-mobile-iframe="true">
             <h3>Share this product</h3>
-            <BrowserRouter>
-              <React.Fragment>
-                <Link to="ttps://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
-                <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-twitter">Tweet</Link>
-                <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-pinterest">Pin It</Link>
-                <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-fancy">>Fancy</Link>
-                <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-google">+1</Link>
-              </React.Fragment>
-            </BrowserRouter>
+            <Link to="ttps://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
+            <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-twitter">Tweet</Link>
+            <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-pinterest">Pin It</Link>
+            <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-fancy">>Fancy</Link>
+            <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-google">+1</Link>
           </div>
         </div>
         <div>
           <h3>More from this collection</h3>
-          <BrowserRouter>
-            <React.Fragment>
-              <div className="closure-frontal-collection">
-                <Link to="https://www.hairbyadara.com/closures/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic3" width="100%" height="100%"/></Link>
-                <p>Brazilian Body Wave Collection</p>
-              </div>
-              <div className="closure-frontal-collection">
-                <Link to="https://www.hairbyadara.com/closures/kinky-curl-closure"><img src={kinkyClosure} id="kc-collection-pic3" width="100%" height="100%"/></Link>
-                <p>Brazilian Kinky Curl Closure</p>
-              </div>
-              <div className="closure-frontal-collection">
-                <Link to="https://www.hairbyadara.com/closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kf-collection=pic3" width="100%" height="100%"/></Link>
-                <p>Brazilian Kinky Curl Frontal</p>
-              </div>
-              <div className="closure-frontal-collection">
-                <Link to="https://www.hairbyadara.com/closures/straight-frontal"><img src={straightFrontal} id="sf-collection-pic3" width="100%" height="100%"/></Link>
-                <p>Brazilian Mink Straight Frontal</p>
-              </div>
-            </React.Fragment>
-          </BrowserRouter>
+          <div className="closure-frontal-collection">
+            <Link to="../closures/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic3" width="100%" height="100%"/></Link>
+            <p>Brazilian Body Wave Collection</p>
+          </div>
+          <div className="closure-frontal-collection">
+            <Link to="../closures/kinky-curl-closure"><img src={kinkyClosure} id="kc-collection-pic3" width="100%" height="100%"/></Link>
+            <p>Brazilian Kinky Curl Closure</p>
+          </div>
+          <div className="closure-frontal-collection">
+            <Link to="../closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kf-collection=pic3" width="100%" height="100%"/></Link>
+            <p>Brazilian Kinky Curl Frontal</p>
+          </div>
+          <div className="closure-frontal-collection">
+            <Link to="../closures/straight-frontal"><img src={straightFrontal} id="sf-collection-pic3" width="100%" height="100%"/></Link>
+            <p>Brazilian Mink Straight Frontal</p>
+          </div>
         </div>
       </div>
     );
