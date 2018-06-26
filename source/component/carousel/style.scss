@@ -1,7 +1,14 @@
 .slider-image {
-  padding-left: 10%;
+  padding-left: 8%;
+  padding-top: 2%;
 }
 
 .button {
   margin-top: 5%;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: goldenrod;
+  margin: 2%;
+  border-radius: 0;
 }

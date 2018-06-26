@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, BrowserRouter} from 'react-router-dom';
+import { Link, BrowserRouter } from 'react-router-dom';
 import bkcPic from '../../../images/kinky-curl-3–bundles.JPG';
 import bwPic from '../../../images/body-wave-three-brazilian-front-angle.JPG';
 import sPic from '../../../images/straight-3-bundles.JPG';
@@ -95,11 +95,11 @@ class BrazilianKinkyCurl extends React.Component {
             <h3>Share this product</h3>
             <BrowserRouter>
               <React.Fragment>
-                <Link target="_blank" to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-kinky-curl" className="fb-xfbml-parse-ignore">Share</Link>
-                <Link target="_blank" to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/brazilian-kinky-curl" className="share-twitter">Tweet</Link>
-                <Link target="_blank" to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-kinky-curl&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" className="share-pinterest">Pin it</Link>
-                <Link target="_blank" to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-kinky-curl&Title=Brazilian%20Kinky%20Curl&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" className="share-fancy">Fancy</Link>
-                <Link target="_blank" to="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-kinky-curl" className="share-google">+1</Link>
+                <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
+                <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="share-twitter">Tweet</Link>
+                <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-kinky-curl&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" target="_blank" className="share-pinterest">Pin it</Link>
+                <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-kinky-curl&Title=Brazilian%20Kinky%20Curl&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" target="_blank" className="share-fancy">Fancy</Link>
+                <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="share-google">+1</Link>
               </React.Fragment>
             </BrowserRouter>
           </div>

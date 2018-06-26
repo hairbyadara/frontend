@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link ,BrowserRouter}from 'react-router-dom';
+import { Link, BrowserRouter }from 'react-router-dom';
 import './style.scss';
 import bodyWavePic from '../images/body-wave-three-brazilian-front-angle.JPG';
 import straightPic from '../images/straight-3-bundles.JPG';

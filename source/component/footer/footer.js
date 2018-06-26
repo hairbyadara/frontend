@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, BrowserRouter} from 'react-router-dom';
+import { Link, BrowserRouter } from 'react-router-dom';
 import './style.scss';
 
 class Footer extends React.Component {
@@ -22,7 +22,7 @@ class Footer extends React.Component {
         </div>
         <div id="footer2">
           <h4>Contact Us</h4>
-          <p id="contact-info">Contact us for local delivery in the greater Seattle area (206) 468-9047</p>
+          <p id="contact-info">Contact us for local delivery in the Greater Seattle area (206) 468-9047</p>
         </div>
         <div className="copyright"> 
           Copyright &copy; 2018 Adara Hair Extensions. All rights reserved.

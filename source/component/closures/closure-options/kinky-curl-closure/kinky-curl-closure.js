@@ -79,11 +79,11 @@ class KinkyCurlClosure extends React.Component {
           <div className="fb-share-button" data-to="https://www.hairbyadara.com/closures/kinky-curl-closure" data-layout="button" data-size="small" data-mobile-iframe="true">
             <BrowserRouter>
               <React.Fragment>
-                <Link target="_blank" to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closures/kinky-curl-closure" className="fb-xfbml-parse-ignore">Share</Link>
-                <Link target="_blank" to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closures/kinky-curl-closure" className="share-twitter">Tweet</Link>
-                <Link target="_blank" to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closures/kinky-curl-closure" className="share-pinterest">Pin it</Link>
-                <Link target="_blank" to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closures/kinky-curl-closure" className="share-fancy">Fancy</Link>
-                <Link target="_blank" to="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/kinky-curl-closure" className="share-google">+1</Link>
+                <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closures/kinky-curl-closure" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
+                <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closures/kinky-curl-closure" target="_blank" className="share-twitter">Tweet</Link>
+                <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closures/kinky-curl-closure" target="_blank" className="share-pinterest">Pin it</Link>
+                <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closures/kinky-curl-closure" target="_blank" className="share-fancy">Fancy</Link>
+                <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/kinky-curl-closure" target="_blank" className="share-google">+1</Link>
               </React.Fragment>
             </BrowserRouter>
           </div>
@@ -93,19 +93,19 @@ class KinkyCurlClosure extends React.Component {
           <BrowserRouter>
             <React.Fragment>
               <div className="closure-frontal-collection">
-                <Link to ="https://www.hairbyadara.com/closures/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic2" width="100%" height="100%"/></Link>
+                <Link to="https://www.hairbyadara.com/closures/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic2" width="100%" height="100%"/></Link>
                 <p>Brazilian Body Wave Closure</p>
               </div>
               <div className="closure-frontal-collection">
-                <Link to ="https://www.hairbyadara.com/closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kc-collection-pic2" width="100%" height="100%"/></Link>
+                <Link to="https://www.hairbyadara.com/closures/kinky-curl-frontal"><img src={kinkyFrontal} id="kc-collection-pic2" width="100%" height="100%"/></Link>
                 <p>Brazilian Kinky Curl Frontal</p>
               </div>
               <div className="closure-frontal-collection">
-                <Link to ="https://www.hairbyadara.com/closures/straight-closure"><img src={straightClosure} id="sc-collection-pic2" width="100%" height="100%"/></Link>
+                <Link to="https://www.hairbyadara.com/closures/straight-closure"><img src={straightClosure} id="sc-collection-pic2" width="100%" height="100%"/></Link>
                 <p>Brazilian Mink Straight Closure</p>
               </div>
               <div className="closure-frontal-collection">
-                <Link to ="https://www.hairbyadara.com/closures/straight-frontal"><img src={straightFrontal} id="sf-collection-pic2" width="100%" height="100%"/></Link>
+                <Link to="https://www.hairbyadara.com/closures/straight-frontal"><img src={straightFrontal} id="sf-collection-pic2" width="100%" height="100%"/></Link>
                 <p>Brazilian Mink Straight Frontal</p>
               </div>
             </React.Fragment>

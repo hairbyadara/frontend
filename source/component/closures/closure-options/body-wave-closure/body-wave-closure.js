@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, BrowserRouter} from 'react-router-dom';
+import { Link, BrowserRouter } from 'react-router-dom';
 import './style.scss';
 import straightClosure from '../../../images/straight-closure.JPG';
 import straightFrontal from '../../../images/straight-frontal.JPG';
@@ -80,11 +80,11 @@ class BodyWaveClosure extends React.Component {
           <div className="fb-share-button" data-to="https://www.hairbyadara.com/closures/body-wave" data-layout="button" data-size="small" data-mobile-iframe="true">
             <BrowserRouter>
               <React.Fragment>
-                <Link target="_blank" to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closures/body-wave" className="fb-xfbml-parse-ignore">Share</Link>
-                <Link target="_blank" to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closures/body-wave" className="share-twitter">Tweet</Link>
-                <Link target="_blank" to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closures/body-wave" className="share-pinterest">Pin it</Link>
-                <Link target="_blank" to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closures/body-wave" className="share-fancy">Fancy</Link>
-                <Link target="_blank" to="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/body-wave" className="share-google">+1</Link>
+                <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closures/body-wave" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
+                <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closures/body-wave" target="_blank" className="share-twitter">Tweet</Link>
+                <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closures/body-wave" target="_blank" className="share-pinterest">Pin it</Link>
+                <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closures/body-wave" target="_blank" className="share-fancy">Fancy</Link>
+                <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/body-wave" target="_blank" className="share-google">+1</Link>
               </React.Fragment>
             </BrowserRouter>
           </div>
@@ -94,19 +94,19 @@ class BodyWaveClosure extends React.Component {
           <BrowserRouter>
             <React.Fragment>
               <div className="closure-frontal-collection">
-                <Link to ="https://www.hairbyadara.com/closures/kinky-curl-closure"><img src={kinkyClosure} id="kc-collection-pic1" width="100%" height="100%"/></Link>
+                <Link to="https://www.hairbyadara.com/closures/kinky-curl-closure"><img src={kinkyClosure} id="kc-collection-pic1" width="100%" height="100%"/></Link>
                 <p>Brazilian Kinky Curl Closure</p>
               </div>
               <div className="closure-frontal-collection">
-                <Link to ="https://www.hairbyadara.com/closures/kinky-curl-frontal"><img src={kinkyFrontal}  id="kf-collection-pic1" width="100%" height="100%"/></Link>
+                <Link to="https://www.hairbyadara.com/closures/kinky-curl-frontal"><img src={kinkyFrontal}  id="kf-collection-pic1" width="100%" height="100%"/></Link>
                 <p>Brazilian Kinky Curl Frontal</p>
               </div>
               <div className="closure-frontal-collection">
-                <Link to ="https://www.hairbyadara.com/closures/straight-closure"><img src={straightClosure}  id="sc-collection-pic1" width="100%" height="100%"/></Link>
+                <Link to="https://www.hairbyadara.com/closures/straight-closure"><img src={straightClosure}  id="sc-collection-pic1" width="100%" height="100%"/></Link>
                 <p>Brazilian Mink Straight Closure</p>
               </div>
               <div className="closure-frontal-collection">
-                <Link to ="https://www.hairbyadara.com/closures/straight-frontal"><img src={straightFrontal}  id="sf-collection-pic1" width="100%" height="100%"/></Link>
+                <Link to="https://www.hairbyadara.com/closures/straight-frontal"><img src={straightFrontal}  id="sf-collection-pic1" width="100%" height="100%"/></Link>
                 <p>Brazilian Mink Straight Frontal</p>
               </div>
             </React.Fragment>

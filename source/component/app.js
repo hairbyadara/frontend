@@ -24,14 +24,11 @@ import Blog from './blog/blog';
 import FAQs from './faq/faq';
 
 const store = createStore();
-class App extends React.Component {
+export default class App extends React.Component {
   componentDidMount() {
     store.subscribe(() => console.log('__STATE__:', store.getState()));
   }
   render() { 
-    // const history = syncHistoryWithStore(browserHistory, store);
-
-    // history.listen(location => analyticsService.track(location.pathname));    
     return (
       <div className='app'>
         <Provider store={store}>
@@ -64,5 +61,3 @@ class App extends React.Component {
     );
   }
 }
-
-export default App;
