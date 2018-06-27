@@ -32,7 +32,7 @@ class KinkyCurlFrontal extends React.Component {
     return (
       <div>
         <div id="kinky-curl-frontal-pic">
-          <img src={kinkyFrontal} width="100%" height="100%"/>
+          <img src={kinkyFrontal} width="90%" height="90%"/>
         </div>
         <div id="kinky-curl-frontal-info">
           <h1>Brazilian Kinky Curl Frontal</h1>
@@ -83,8 +83,8 @@ class KinkyCurlFrontal extends React.Component {
             <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-google">+1</Link>
           </div>
         </div>
+        <h3>More from this collection</h3>
         <div>
-          <h3>More from this collection</h3>
           <div className="closure-frontal-collection">
             <Link to="../closures/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic5" width="100%" height="100%"/></Link>
             <p>Brazilian Body Wave Closure</p>
