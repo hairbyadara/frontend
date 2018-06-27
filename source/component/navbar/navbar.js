@@ -6,28 +6,13 @@ import cartIcon from '../footer/icons/shopping-cart.png';
 import {connect} from 'react-redux';
 
 class Navbar extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     total: ,
-  //   };
-  // }
-
-  // componentWillReceiveProps(nextProps) {
-  //   console.log('heath is cool guy', nextProps.items.length);
-  //   if (nextProps) {
-  //     this.setState({total: nextProps.items.length});
-  //   }
-  // }
-
   render() {
-    console.log(this.props.items);
     return (
       <header>
         <nav>
           <div id="search-cart">
             <input id="search-bar" type="search" name="searchbtn" placeholder="Search..."/>
-            <label htmlFor="cart-icon"> {this.props.cart ? this.props.cart.length : '0'}</label>
+            <label htmlFor="cart-icon"> {this.props.cart.items ? this.props.cart.items.length : 0}</label>
             <Link to="/cart"><img src={cartIcon} className="icon" id="cart-icon" name="cart-icon"/></Link>
           </div>
           <img src={logo} width="15%" height="15%" id="logo"/>
@@ -44,7 +29,7 @@ class Navbar extends React.Component {
 }
 
 let mapStateToProps = state =>  ({
-  cart: state.items,
+  cart: state,
 });
 
 export default connect(mapStateToProps, null)(Navbar);

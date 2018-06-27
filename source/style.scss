@@ -14,10 +14,17 @@ select {
   display: block;
 }
 
+label {
+  margin-right:7%;
+  margin-left: 1%;
+  font-size: x-large;
+}
+
 p , select, button{
   margin-top: 1%;
   margin-bottom: 1%;
 }
+
 p , select {
   padding: 0;
 }
