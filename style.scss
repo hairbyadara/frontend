@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+* {
+  font-family: 'Marcellus', serif;
+}
+
+.main-page {
+  color: goldenrod;
+}
+
+footer {
+  margin-top: 15%;
+}
+
+select {
+  display: block;
+}
+
+label {
+  margin-right:7%;
+  margin-left: 1%;
+  font-size: x-large;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  padding-top: 10%;
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+  text-align: center;
+}
+
+p , select, button{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+p , select {
+  padding: 0;
+}

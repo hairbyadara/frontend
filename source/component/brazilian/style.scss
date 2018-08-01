@@ -22,3 +22,37 @@
 .brazilian-collection-pic {
   padding-left: 5%
 }
+
+
+
+@media screen and (max-device-width: 480px) {
+  #body-wave,
+  #straight,
+  #kinky-curl {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .brazilian-header {
+    padding: 0;
+    margin: 0;
+  }
+  #kinky-img {
+    padding-bottom: 0%;
+  }
+
+  .brazilian-collection {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .brazilian-collection-pic {
+    padding-left: 0%
+  }
+
+}

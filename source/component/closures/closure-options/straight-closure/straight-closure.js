@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Link }  from 'react-router-dom';
 import straightClosure from '../../../images/straight-closure.JPG';
 import straightFrontal from '../../../images/straight-frontal.JPG';
 import bodyWaveClosure from '../../../images/body-wave-closure.JPG';
@@ -16,7 +16,7 @@ class StraightClosure extends React.Component {
       length: '',
       type: '',
       quantity: '',
-      item: 'straight-closure',
+      name: 'straight-closure',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -36,7 +36,7 @@ class StraightClosure extends React.Component {
         </div>
         <div id="straight-closure-info">
           <h1>Brazilian Mink Straight Closure</h1>
-          <h3>$ 95.00</h3>
+          <h4>$ 95.00</h4>
           <form className="straight-closure-form" onSubmit={this.handleSubmit}>
             <p className="label">Length</p>
             <select name="length" id="straight-closure-length" onChange={this.handleChange}>
@@ -56,16 +56,16 @@ class StraightClosure extends React.Component {
             <p className="label">Quantity</p>
             <select name="quantity" id="straight-closure-quantity" onChange={this.handleChange} required>
               <option value="" defaultValue>Select quantity...</option>
-              <option value="one">1</option>
-              <option value="two">2</option>
-              <option value="three">3</option>
-              <option value="four">4</option>
-              <option value="five">5</option>
-              <option value="six">6</option>
-              <option value="seven">7</option>
-              <option value="eight">8</option>
-              <option value="nine">9</option>
-              <option value="ten">10</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
             </select>
             <button type="submt"><span>Add to Cart</span></button>
           </form>
@@ -77,16 +77,16 @@ class StraightClosure extends React.Component {
           Silk closures have a layer of silk as well as a layer of lace. Silk closures tend to be a little thicker than lace, but have more realistic scalp-like appearance due to the silk fabric. Silk closures provides a more natural "scalp". The "scalp" on the silk base closure is more human like than that of a lace closure, therefore requiring less preparation. Hair is individually implanted into the base, knotted, and secured with a strong adhesive. Closures are a great way to protect your natural hair from heat and or inclement weather. The measurement of our closures is the standard size of 4"x4". We carry 12", 14", 16" in stock (18" and 20" available upon request.)
           </h5>
           <div className="fb-share-button" data-href="https://www.hairbyadara.com/closure/straight-closure" data-layout="button" data-size="small" data-mobile-iframe="true">
-            <h3>Share this product</h3>
-            <Link to="ttps://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="fb-xfbml-parse-ignore">Share</Link>
-            <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-twitter">Tweet</Link>
-            <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-pinterest">Pin It</Link>
-            <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-fancy">>Fancy</Link>
-            <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-google">+1</Link>
+            <h4>Share this product</h4>
+            <Link to="ttps://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-button" className="fb-xfbml-parse-ignore">Share</Link>
+            <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-button" className="share-twitter">Tweet</Link>
+            <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-button" className="share-pinterest">Pin It</Link>
+            <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-button" className="share-fancy">>Fancy</Link>
+            <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closure/straight-closure" target="_blank" className="share-button" className="share-google">+1</Link>
           </div>
         </div>
         <div>
-          <h3>More from this collection</h3>
+          <h4>More from this collection</h4>
           <div className="closure-frontal-collection">
             <Link to="../closures/body-wave-closure"><img src={bodyWaveClosure} id="bw-collection-pic3" width="100%" height="100%"/></Link>
             <p>Brazilian Body Wave Collection</p>

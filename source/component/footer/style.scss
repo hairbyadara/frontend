@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
 }
+
 .copyright {
   margin-top: 4%;
   text-align: center;
@@ -14,18 +15,34 @@
 
 #footer2 {
   text-align: right;
-  // font-size:  30%;
 }
+
 #contact-info {
-  width: 35%;
   text-align: right;
   margin: 0;
   margin-right: 0;
-
-  padding-left: 65%;
 }
 
 #footer1 > a {
   margin: 0;
   padding: 1.5%;
+}
+
+@media screen and (max-device-width: 480px) {
+  #footer1, #footer2{
+    font-size: 12px;
+  }
+ #contact-info {
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+  }
+  #footer1 > a {
+    margin: 0%;
+    padding: 0%;
+    display: inline-block;
+  }
+  .copyright {
+    font-size: 8px;
+  }
 }

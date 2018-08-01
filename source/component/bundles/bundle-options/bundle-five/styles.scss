@@ -2,22 +2,23 @@
   margin-left: 13%;
 }
 
-#col1,
-#col2 {
-  display: inline-block;
-  position: relative;
-  width: 49%;
-  margin: 0;
-  padding: 0;
-  // border: 2px black solid;
-}
-
-#col1 {
-  float: left;
-}
-#col2 {
-  float: right;
-}
 .five-bundle-button {
    margin: 0;
  }
+
+ @media screen and (max-device-width: 480px) {
+  // #five-bundle-main {
+  //   margin-left: 0%;
+  // }
+  #col1-bundles, #col2-bundles {
+    display: inline-block;
+    width: 49%;
+    margin: 0;
+    padding: 0;
+  }
+  .share-header {
+    text-align: left;
+    padding-bottom: 0;
+    margin-bottom: 0
+  }
+}
