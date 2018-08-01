@@ -17,3 +17,26 @@
 #sc-collection-pic1 {
   margin-bottom: 22%;
 }
+
+#share-links-bc {
+  padding-top: 20%;
+}
+
+@media screen and (max-device-width: 480px){
+  h1 {
+    font-size: 22px;
+  }
+
+  #body-wave-closure-pic {
+    margin-left: 0;
+    width: 50%;
+  }
+  #kc-collection-pic1 {
+    margin-bottom: 0%;
+  }
+
+  #sc-collection-pic1 {
+    margin-bottom: 0;
+  }
+
+}
