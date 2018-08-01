@@ -1,16 +1,16 @@
-#col1-bw,
-#col2-bw {
+#col1-kc,
+#col2-kc {
   display: inline-block;
   position: relative;
   width: 49.5%;
   margin: 2px;
   padding: 0;
+  height: auto;
 }
 
-#col1-bw {
+#col1-kc {
   float: left;
 }
-
 .content {
   width: 45.5%;
   float: right;
@@ -19,33 +19,20 @@
 }
 
 
+
 @media screen and (max-device-width: 480px){
-  #col1-bw,
-  #col2-bw {
+  #col1-kc,
+  #col2-kc {
     display: inline-block;
     position: relative;
     width: 49.5%;
     margin: 0;
     padding: 0;
   }
-  #share-links {
-    display: block;
-    margin-top:30%;
-    padding: 0;
-    width: 50%;
-  }
 
-  .share-facebook,
-  .share-twitter,
-  .share-pinterest,
-  .share-fancy,
-  .share-google {
-    display: inline-block;
-    margin: 0;
-    padding: 2px;
-  }
   .content {
     width: 100%;
-    display: block;
+     display: block;
   }
+
 }

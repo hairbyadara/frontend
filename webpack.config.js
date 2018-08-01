@@ -12,7 +12,7 @@ const ExtractPlugin = require('extract-text-webpack-plugin');
 let plugins = [
   new EnvironmentPlugin(['NODE_ENV']),
   new ExtractPlugin('bundle-[hash].css'),
-  new HtmlPlugin({ template: `${__dirname}/source/index.html` }),
+  new HtmlPlugin({ template: `${__dirname}/index.html` }),
   new DefinePlugin({
     __DEBUG__: JSON.stringify(!production),
     __API_URL__: JSON.stringify(process.env.API_URL),
@@ -25,7 +25,7 @@ if(production) {
 
 module.exports = {
   plugins,
-  entry: `${__dirname}/source/main.js`,
+  entry: `${__dirname}/main.js`,
   devServer: {
     historyApiFallback: true,
   },

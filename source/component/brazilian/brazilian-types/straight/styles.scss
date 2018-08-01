@@ -3,15 +3,40 @@
   display: inline-block;
   position: relative;
   width: 49.5%;
-  height: 825px;
-  margin: 0;
+  margin: 2px;
   padding: 0;
+  height: auto;
 }
-
-#col1-straight {
+#col1-straight{
   float: left;
 }
-
-#col-straight {
+.content {
+  width: 45.5%;
   float: right;
+  margin-right:4%;
+  display: block;
+}
+
+
+@media screen and (max-device-width: 480px){
+  #col1-straight,
+  #col2-straight {
+    display: inline-block;
+    position: relative;
+    width: 49%;
+    padding: 0;
+    height: auto;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .share-facebook,
+  .share-twitter,
+  .share-pinterest,
+  .share-fancy,
+  .share-google {
+    display: inline-block;
+  }
 }

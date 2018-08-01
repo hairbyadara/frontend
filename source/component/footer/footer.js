@@ -1,11 +1,8 @@
 import React from 'react';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Link }  from 'react-router-dom';
 import './style.scss';
 
 class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <footer>
