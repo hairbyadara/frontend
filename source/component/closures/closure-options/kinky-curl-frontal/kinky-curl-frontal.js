@@ -31,11 +31,11 @@ class KinkyCurlFrontal extends React.Component {
   render() {
     return (
       <div>
+        <h1>Brazilian Kinky Curl Frontal</h1>
         <div id="kinky-curl-frontal-pic">
           <img src={kinkyFrontal} width="90%" height="90%"/>
         </div>
         <div id="kinky-curl-frontal-info">
-          <h1>Brazilian Kinky Curl Frontal</h1>
           <h4>$ 145.00</h4>
           <form className="kinky-frontal-form" onSubmit={this.handleSubmit}>
             <p className="label">Length</p>
@@ -67,21 +67,21 @@ class KinkyCurlFrontal extends React.Component {
             </select>
             <button type="submit"><span>Add to Cart</span></button>
           </form>
-          <h5>
+        </div>
+        <h5 className="content">
         A closure is a small piece of lace fabric, usually about 4"x4", with individual strands of hair ventilated through and knotted directly to the lace. Our Lace Closures are without a doubt undetectable and appear to be coming directly from your scalp. Our closures blend effortlessly with our bundles finishing off your style with a virtually seamless weave. We carry 12", 14", 16" in stock (18" and 20" available upon request.) All lace closures measure at 4"x4".
-            <br/>
+          <br/>
           Note: closure knots do not come bleached and this closure is a free part.
-            <br/>
+          <br/>
           Silk closures have a layer of silk as well as a layer of lace. Silk closures tend to be a little thicker than lace, but have more realistic scalp-like appearance due to the silk fabric. Silk closures provides a more natural "scalp". The "scalp" on the silk base closure is more human like than that of a lace closure, therefore requiring less preparation. Hair is individually implanted into the base, knotted, and secured with a strong adhesive. Closures are a great way to protect your natural hair from heat and or inclement weather. The measurement of our closures is the standard size of 4"x4". We carry 12", 14", 16" in stock (18" and 20" available upon request.)
-          </h5>
-          <div className="fb-share-button" data-to="https://www.hairbyadara.com/closures/kinky-curl-frontal" data-layout="button" data-size="small" data-mobile-iframe="true">
-            <h4> Share this product </h4>
-            <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-button" className="fb-xfbml-parse-ignore">Share</Link>
-            <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-button" className="share-twitter">Tweet</Link>
-            <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-button" className="share-pinterest">Pin it</Link>
-            <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-button" className="share-fancy">Fancy</Link>
-            <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-button" className="share-google">+1</Link>
-          </div>
+        </h5>
+        <div className="fb-share-button" id="share-links-cf" data-to="https://www.hairbyadara.com/closures/kinky-curl-frontal" data-layout="button" data-size="small" data-mobile-iframe="true">
+          <h4> Share this product </h4>
+          <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-button" className="fb-xfbml-parse-ignore share-facebook">Share</Link>
+          <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-button" className="share-twitter">Tweet</Link>
+          <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-button" className="share-pinterest">Pin it</Link>
+          <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-button" className="share-fancy">Fancy</Link>
+          <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/closures/kinky-curl-frontal" target="_blank" className="share-button" className="share-google">+1</Link>
         </div>
         <h4>More from this collection</h4>
         <div>

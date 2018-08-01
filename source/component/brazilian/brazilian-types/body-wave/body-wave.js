@@ -90,27 +90,25 @@ class BrazilianBodyWave extends React.Component {
           </ul>
           Note: Excessive heat/color can damage texture and curl pattern of your bundles.
         </h5>
-        <div className="placeholder">
-          <div className="fb-share-button" data-to="https://www.hairbyadara.com/brazilian/body-wave" data-layout="button" data-size="small" data-mobile-iframe="true" id="share-links">
-            <h4>Share this product</h4>
-            <Link to="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hairbyadara.com%2Fbrazilian%2Fbody-wave&amp;src=sdkpreparse" target="_blank" className="fb-xfbml-parse-ignore share-facebook">Share</Link>
-            <Link to="//twitter.com/share?text=Brazilian%20Mink%20Body%20Wave&amp;url=https://www.hairbyadara.com/products/brazilian-body-wave" target="_blank" className="share-twitter">Tweet  </Link>
-            <Link to="//pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/products/brazilian-body-wave&amp;media=http://cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336&amp;description=Brazilian%20Mink%20Body%20Wave" target="_blank" className="share-pinterest">Pin it</Link>
-            <Link to="//fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/products/brazilian-body-wave&amp;Title=Brazilian%20Mink%20Body%20Wave&amp;Category=Other&amp;ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336" target="_blank" className="share-fancy">Fancy</Link>
-            <Link to="//plus.google.com/share?url=https://www.hairbyadara.com/products/brazilian-body-wave" target="_blank" className="share-google">+1</Link>
+        <div className="fb-share-button" data-to="https://www.hairbyadara.com/brazilian/body-wave" data-layout="button" data-size="small" data-mobile-iframe="true">
+          <h4 className="share-header">Share this product</h4>
+          <Link to="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hairbyadara.com%2Fbrazilian%2Fbody-wave&amp;src=sdkpreparse" target="_blank" className="fb-xfbml-parse-ignore share-facebook">Share</Link>
+          <Link to="//twitter.com/share?text=Brazilian%20Mink%20Body%20Wave&amp;url=https://www.hairbyadara.com/products/brazilian-body-wave" target="_blank" className="share-twitter">Tweet  </Link>
+          <Link to="//pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/products/brazilian-body-wave&amp;media=http://cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336&amp;description=Brazilian%20Mink%20Body%20Wave" target="_blank" className="share-pinterest">Pin it</Link>
+          <Link to="//fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/products/brazilian-body-wave&amp;Title=Brazilian%20Mink%20Body%20Wave&amp;Category=Other&amp;ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336" target="_blank" className="share-fancy">Fancy</Link>
+          <Link to="//plus.google.com/share?url=https://www.hairbyadara.com/products/brazilian-body-wave" target="_blank" className="share-google">+1</Link>
+        </div>
+        <br>
+        </br>
+        <h4>More from this collection</h4>
+        <div className="brazilian-collection-pic">
+          <div className="brazilian-collection">
+            <Link to="../brazilian/straight"><img src={straightBundlePic} width="75%" height="75%"/></Link>
+            <p>Brazilian Mink Straight</p>
           </div>
-          <br>
-          </br>
-          <h4>More from this collection</h4>
-          <div className="brazilian-collection-pic">
-            <div className="brazilian-collection">
-              <Link to="../brazilian/straight"><img src={straightBundlePic} width="75%" height="75%"/></Link>
-              <p>Brazilian Mink Straight</p>
-            </div>
-            <div className="brazilian-collection">
-              <Link to="../brazilian/kinky-curl"><img src={kinkyCurlPic} width="75%" height="75%"/></Link>
-              <p>Brazilian Kinky Curl</p>
-            </div>
+          <div className="brazilian-collection">
+            <Link to="../brazilian/kinky-curl"><img src={kinkyCurlPic} width="75%" height="75%"/></Link>
+            <p>Brazilian Kinky Curl</p>
           </div>
         </div>
       </div>

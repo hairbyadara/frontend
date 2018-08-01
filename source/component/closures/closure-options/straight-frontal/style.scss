@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+#straight-frontal-pic {
+  float: left;
+}
+
 #bw-collection-pic4 {
   margin-bottom: 30%;
 }
@@ -17,4 +21,33 @@
 
 #sc-collection-pic4 {
   margin-bottom: 15%;
+}
+
+#share-links-sf {
+  padding-top: 24%;
+  text-align: left;
+}
+
+@media screen and (max-device-width: 480px){
+  #straight-frontal-pic {
+    margin: 0;
+    width: 50%
+  }
+  #straight-frontal-info {
+    margin: 0;
+    padding-left: 5%;
+    width: 20%;
+  }
+
+  #bw-collection-pic4 {
+    margin-bottom: 0%;
+  }
+
+  #kf-collection-pic4{
+    margin-bottom: 0%;
+  }
+
+  #kc-collection-pic4{
+    margin-bottom: 0%;
+  }
 }

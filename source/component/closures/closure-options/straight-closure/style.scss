@@ -23,3 +23,30 @@
   margin-bottom: 40%;
 }
 
+#share-links-sc {
+  padding-top: 20%;
+}
+
+@media screen and (max-device-width: 480px){
+  #straight-closure-pic {
+    margin: 0;
+    width: 50%
+  }
+  #straight-closure-info {
+    margin: 0;
+    padding-left: 5%;
+    width: 20%;
+  }
+
+  #bw-collection-pic3 {
+    margin-bottom: 0%;
+  }
+
+  #kf-collection-pic3{
+    margin-bottom: 0%;
+  }
+
+  #kc-collection-pic3{
+    margin-bottom: 0%;
+  }
+}
