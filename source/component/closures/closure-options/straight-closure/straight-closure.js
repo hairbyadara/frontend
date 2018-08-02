@@ -17,16 +17,17 @@ class StraightClosure extends React.Component {
       type: '',
       quantity: '',
       name: 'straight-closure',
+      price: '95.00',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(event){
-    this.setSate({[event.target.name]: event.target.value});
-  }
   handleSubmit(event){
     event.preventDefault();
     this.props.cartItemCartCreate(this.state);
+  }
+  handleChange(event){
+    this.setSate({[event.target.name]: event.target.value});
   }
   render() {
     return (
@@ -41,11 +42,11 @@ class StraightClosure extends React.Component {
             <p className="label">Length</p>
             <select name="length" id="straight-closure-length" onChange={this.handleChange}>
               <option value="" defaultValue>Select length...</option>
-              <option value="12in">12"</option>
-              <option value="14in">14"</option>
-              <option value="16in">16"</option>
-              <option value="18in">18"</option>
-              <option value="20in">20"</option>
+              <option value="12 Inches">12"</option>
+              <option value="14 Inches">14"</option>
+              <option value="16 Inches">16"</option>
+              <option value="18 Inches">18"</option>
+              <option value="20 Inches">20"</option>
             </select>
             <p>Hair type</p>
             <select name="type" id="straight-closure-type" onChange={this.handleChange}>

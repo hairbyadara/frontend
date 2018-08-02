@@ -9,20 +9,21 @@
   width: 100%;
 }
 #cart-col-1{
-  width: 59%;
+  width: 30%;
 }
 
 #cart-col-2,
-#cart-col-3 {
+#cart-col-3,
+#cart-col-4 {
   width: 20%;
 }
 
-#cart-col-4 {
-  position: absolute;
-  right: 20%;
+#cart-col-5 {
+  float: right;
+  left: 20%;
 }
 
-ul {
+ul, li  {
   list-style-type: none;
   margin: 0;
   padding: 0;

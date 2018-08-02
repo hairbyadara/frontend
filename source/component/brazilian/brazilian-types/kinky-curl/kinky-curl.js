@@ -40,15 +40,15 @@ class BrazilianKinkyCurl extends React.Component {
           <form className="brazilian-kinky-form" onSubmit={this.handleSubmit}>
             <select name="length" id="BKCLength" onChange={this.handleChange} required>
               <option value="" defaultValue>Select hair type...</option>
-              <option value="14in">14"</option>
-              <option value="16in">16"</option>
-              <option value="18in">18"</option>
-              <option value="20in">20"</option>
-              <option value="22in">22"</option>
-              <option value="24in">24"</option>
-              <option value="26in">26"</option>
-              <option value="28in">28"</option>
-              <option value="30in">30"</option>
+              <option value="14 Inches">14"</option>
+              <option value="16 Inches">16"</option>
+              <option value="18 Inches">18"</option>
+              <option value="20 Inches">20"</option>
+              <option value="22 Inches">22"</option>
+              <option value="24 Inches">24"</option>
+              <option value="26 Inches">26"</option>
+              <option value="28 Inches">28"</option>
+              <option value="30 Inches">30"</option>
             </select>
             <p>Quantity</p>
             <select name="quantity" id="BKCQuantity" onChange={this.handleChange} required>

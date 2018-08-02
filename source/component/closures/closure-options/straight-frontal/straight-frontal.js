@@ -18,6 +18,7 @@ class StraightFrontal extends React.Component {
       type: '',
       quantity: '',
       name: 'straight-frontal',
+      price: '145.00',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,10 +43,10 @@ class StraightFrontal extends React.Component {
             <p className="label">Length</p>
             <select name="length" id="straight-frontal-length" onChange={this.handleChange} required>
               <option value="" defaultValue>Select length...</option>
-              <option value="12in">12"</option>
-              <option value="14in">14"</option>
-              <option value="16in">16"</option>
-              <option value="18in">18"</option>
+              <option value="12 Inches">12"</option>
+              <option value="14 Inches">14"</option>
+              <option value="16 Inches">16"</option>
+              <option value="18 Inches">18"</option>
             </select>
             <p className="label">Hair Type</p>
             <select name="type" id="straight-frontal-type" onChange={this.handleChange} required>

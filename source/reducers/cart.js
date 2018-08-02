@@ -3,7 +3,7 @@ export default (state=[], action) => {
 
   switch(type) {
   case 'CART_CREATE': {
-    const updateState = [...state];
+    const updateState = {...state};
     if(!updateState.items) {
       updateState.items= [];
     }

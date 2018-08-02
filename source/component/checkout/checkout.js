@@ -14,7 +14,7 @@ class Cart extends React.Component {
       cart: this.props.cart ? this.props.cart : {},
       edit: false,
     };
-    this.handleName = this.handleName.bind(this);
+    this.handleCartTotal = this.handleCartTotal.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
   }
@@ -27,20 +27,22 @@ class Cart extends React.Component {
     this.props.cartItemCartUpdate(this.state);
   }
 
-  handleName() {
-    if (this.props.cart.length > 0) {
-      for (var i in this.props.cart) {
-        return (this.props.cart.items[0].name);
+
+  handleCartTotal() {
+    // let itemTotal = localStorage.items > 0 ? JSON.parse(localStorage.items)[0].quantity * JSON.parse(localStorage.items)[0].price : undefined;
+
+    let items =  localStorage.items ? JSON.parse(localStorage.items) : undefined;
+    console.log('HERRRREEEE');
+    // let cartTotal = 0;
+    if (items !== undefined) {
+      for (var x in items) {
+        let itemTotal = items[x].price *  items[x].quantity;
+        console.log(itemTotal);
       }
-    }
-    else return 0;
+    } else return 0;
   }
 
   render() {
-    // let totalSpend = this.state.cart.items ? this.state.cart.items.map(total => {total.quantity * total.price;}) : undefined;
-    let totalSpend = this.state.cart.items ? this.state.cart.items[0].quantity * this.state.cart.items[0].price : undefined;
-    console.log(totalSpend);
-
     // const onSuccess = (payment) => {
     //   // Congratulation, it came here means everything's fine!
     //   console.log('The payment was succeeded!', payment);
@@ -82,45 +84,58 @@ class Cart extends React.Component {
         <div id="cart-header">
           <div id="cart-col-1" className="cart-header">
             <h4>Item</h4>
-            <ul>
-              { this.state.cart.items ?
-                <li>{this.state.cart.items[0].name}</li>
-                // this.state.cart.items.map((items,index) =>
-                //   <li key={index}>{items.name}</li>
-                // )
-                :
-                undefined
-              }
-            </ul>
+            { localStorage.items ?
+              JSON.parse(localStorage.items).map((name,index) =>
+                <li key={index}>
+                  {/* <button id={name._id} onClick={this.handleDelete()}>Delete</button> */}
+                  {name.name}
+                </li>)
+              :
+              undefined
+            }
           </div>
           <div id="cart-col-2" className="cart-header">
             <h4>Quantity</h4>
             <ul>
-              { this.state.cart.items ?
-                <li id="item-quantity">{this.state.cart.items[0].quantity}</li>
-                // this.state.cart.items.map((items,index) =>
-                //   <li key={index}>{items.quantity}</li>
-                // )
+              { localStorage.items ?
+                JSON.parse(localStorage.items).map((quantity,index) =>
+                  <li key={index}>
+                    {quantity.quantity}
+                  </li>)
                 :
                 undefined
               }
             </ul>
           </div>
           <div id="cart-col-3" className="cart-header">
-            <h4>Price</h4>
+            <h4>Length</h4>
             <ul>
-              { this.state.cart.items ?
-                <li id="item-total">{totalSpend}</li>
-                // this.state.cart.items.map((items,index) =>
-                //   <li key={index}>{items.name}</li>
-                // )
+              { localStorage.items ?
+                JSON.parse(localStorage.items).map((length,index) =>
+                  <li key={index}>
+                    {length.length}
+                  </li>)
                 :
                 undefined
               }
             </ul>
           </div>
+          <div id="cart-col-4" className="cart-header">
+            <h4>Price</h4>
+            <ul>
+              {
+                localStorage.items ?
+                  JSON.parse(localStorage.items).map((quantity,index) =>
+                    <li key={index}>
+                      $ {quantity.quantity * quantity.price}.00
+                    </li>)
+                  :
+                  undefined
+              }
+            </ul>
+          </div>
         </div>
-        <div id="cart-col-4">
+        <div id="cart-col-5">
           <h4>Tax:</h4>
           <h4>Total:</h4>
         </div>

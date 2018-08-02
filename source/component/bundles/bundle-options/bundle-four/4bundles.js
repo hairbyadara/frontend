@@ -45,55 +45,55 @@ class FourBundle extends React.Component {
               </select>
               <select name="priceOne" id="priceOne" onChange={this.handleChange} required>
                 <option value="" defaultValue>Select length</option>
-                <option name="12in" value="65">12" $ 65.00 </option>
-                <option name="14in" value="70">14" $ 70.00 </option>
-                <option name="16in" value="75">16" $ 75.00 </option>
-                <option name="18in" value="80">18" $ 80.00 </option>
-                <option name="20in" value="85">20" $ 85.00 </option>
-                <option name="22in" value="90">22" $ 90.00 </option>
-                <option name="24in" value="95">24" $ 95.00 </option>
-                <option name="26in" value="100">26" $ 100.00 </option>
-                <option name="28in" value="105">28" $ 105.00 </option>
-                <option name="30in" value="110">30" $ 110.00 </option>
+                <option name="12 Inches" value="65">12" $ 65.00 </option>
+                <option name="14 Inches" value="70">14" $ 70.00 </option>
+                <option name="16 Inches" value="75">16" $ 75.00 </option>
+                <option name="18 Inches" value="80">18" $ 80.00 </option>
+                <option name="20 Inches" value="85">20" $ 85.00 </option>
+                <option name="22 Inches" value="90">22" $ 90.00 </option>
+                <option name="24 Inches" value="95">24" $ 95.00 </option>
+                <option name="26 Inches" value="100">26" $ 100.00 </option>
+                <option name="28 Inches" value="105">28" $ 105.00 </option>
+                <option name="30 Inches" value="110">30" $ 110.00 </option>
               </select>
               <select name="priceTwo" id="priceTwo" onChange={this.handleChange} required>
                 <option value="" defaultValue>Select length</option>
-                <option name="12in" value="65">12" $ 65.00 </option>
-                <option name="14in" value="70">14" $ 70.00 </option>
-                <option name="16in" value="75">16" $ 75.00 </option>
-                <option name="18in" value="80">18" $ 80.00 </option>
-                <option name="20in" value="85">20" $ 85.00 </option>
-                <option name="22in" value="90">22" $ 90.00 </option>
-                <option name="24in" value="95">24" $ 95.00 </option>
-                <option name="26in" value="100">26" $ 100.00 </option>
-                <option name="28in" value="105">28" $ 105.00 </option>
-                <option name="30in" value="110">30" $ 110.00 </option>
+                <option name="12 Inches" value="65">12" $ 65.00 </option>
+                <option name="14 Inches" value="70">14" $ 70.00 </option>
+                <option name="16 Inches" value="75">16" $ 75.00 </option>
+                <option name="18 Inches" value="80">18" $ 80.00 </option>
+                <option name="20 Inches" value="85">20" $ 85.00 </option>
+                <option name="22 Inches" value="90">22" $ 90.00 </option>
+                <option name="24 Inches" value="95">24" $ 95.00 </option>
+                <option name="26 Inches" value="100">26" $ 100.00 </option>
+                <option name="28 Inches" value="105">28" $ 105.00 </option>
+                <option name="30 Inches" value="110">30" $ 110.00 </option>
               </select>
               <select name="priceThree" id="priceThree" onChange={this.handleChange} required>
                 <option value="" defaultValue>Select length</option>
-                <option name="12in" value="65">12" $ 65.00 </option>
-                <option name="14in" value="70">14" $ 70.00 </option>
-                <option name="16in" value="75">16" $ 75.00 </option>
-                <option name="18in" value="80">18" $ 80.00 </option>
-                <option name="20in" value="85">20" $ 85.00 </option>
-                <option name="22in" value="90">22" $ 90.00 </option>
-                <option name="24in" value="95">24" $ 95.00 </option>
-                <option name="26in" value="100">26" $ 100.00 </option>
-                <option name="28in" value="105">28" $ 105.00 </option>
-                <option name="30in" value="110">30" $ 110.00 </option>
+                <option name="12 Inches" value="65">12" $ 65.00 </option>
+                <option name="14 Inches" value="70">14" $ 70.00 </option>
+                <option name="16 Inches" value="75">16" $ 75.00 </option>
+                <option name="18 Inches" value="80">18" $ 80.00 </option>
+                <option name="20 Inches" value="85">20" $ 85.00 </option>
+                <option name="22 Inches" value="90">22" $ 90.00 </option>
+                <option name="24 Inches" value="95">24" $ 95.00 </option>
+                <option name="26 Inches" value="100">26" $ 100.00 </option>
+                <option name="28 Inches" value="105">28" $ 105.00 </option>
+                <option name="30 Inches" value="110">30" $ 110.00 </option>
               </select>
               <select name="priceFour" id="priceFour" onChange={this.handleChange} required>
                 <option value="" defaultValue>Select length</option>
-                <option name="12in" value="65">12" $ 65.00 </option>
-                <option name="14in" value="70">14" $ 70.00 </option>
-                <option name="16in" value="75">16" $ 75.00 </option>
-                <option name="18in" value="80">18" $ 80.00 </option>
-                <option name="20in" value="85">20" $ 85.00 </option>
-                <option name="22in" value="90">22" $ 90.00 </option>
-                <option name="24in" value="95">24" $ 95.00 </option>
-                <option name="26in" value="100">26" $ 100.00 </option>
-                <option name="28in" value="105">28" $ 105.00 </option>
-                <option name="30in" value="110">30" $ 110.00 </option>
+                <option name="12 Inches" value="65">12" $ 65.00 </option>
+                <option name="14 Inches" value="70">14" $ 70.00 </option>
+                <option name="16 Inches" value="75">16" $ 75.00 </option>
+                <option name="18 Inches" value="80">18" $ 80.00 </option>
+                <option name="20 Inches" value="85">20" $ 85.00 </option>
+                <option name="22 Inches" value="90">22" $ 90.00 </option>
+                <option name="24 Inches" value="95">24" $ 95.00 </option>
+                <option name="26 Inches" value="100">26" $ 100.00 </option>
+                <option name="28 Inches" value="105">28" $ 105.00 </option>
+                <option name="30 Inches" value="110">30" $ 110.00 </option>
               </select>
               <button type="submit" id="four-bundle-button"><span>Add to Cart</span></button>
             </form>

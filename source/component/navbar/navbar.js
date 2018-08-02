@@ -12,7 +12,7 @@ class Navbar extends React.Component {
         <nav>
           <div id="search-cart">
             <input id="search-bar" type="search" name="searchbtn" placeholder="Search..."/>
-            <label className="label" htmlFor="cart-icon"> : {this.props.cart.items ? this.props.cart.items.length : 0}</label>
+            <label className="label" htmlFor="cart-icon"> : {localStorage.items ? JSON.parse(localStorage.items).length : 0}</label>
             <Link to="/cart"><img src={cartIcon} id="cart-icon" className="icon" name="cart-icon"/></Link>
           </div>
           <Link to="/"><img src={logo} id="logo"/></Link>
