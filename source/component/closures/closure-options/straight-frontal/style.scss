@@ -9,6 +9,7 @@
 
 #straight-frontal-pic {
   float: left;
+  height: 400px;
 }
 
 #bw-collection-pic4 {
@@ -23,20 +24,15 @@
   margin-bottom: 15%;
 }
 
-#share-links-sf {
-  padding-top: 24%;
-  text-align: left;
-}
 
 @media screen and (max-device-width: 480px){
-  #straight-frontal-pic {
-    margin: 0;
-    width: 50%
-  }
+  #straight-frontal-pic,
   #straight-frontal-info {
+    display: block;
+    position: relative;
+    width: 100%;
     margin: 0;
-    padding-left: 5%;
-    width: 20%;
+    padding: 0;
   }
 
   #bw-collection-pic4 {

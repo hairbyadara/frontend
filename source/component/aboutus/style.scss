@@ -1,0 +1,17 @@
+.about-us-info {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.owner-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-device-width: 480px) {
+  .owner-pic {
+    width: 60%;
+  }
+}

@@ -18,18 +18,18 @@
   margin-bottom: 22%;
 }
 
-#share-links-bc {
-  padding-top: 20%;
-}
-
 @media screen and (max-device-width: 480px){
   h1 {
     font-size: 22px;
   }
 
-  #body-wave-closure-pic {
-    margin-left: 0;
-    width: 50%;
+  #body-wave-closure-pic,
+  #body-wave-closure-info{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   #kc-collection-pic1 {
     margin-bottom: 0%;

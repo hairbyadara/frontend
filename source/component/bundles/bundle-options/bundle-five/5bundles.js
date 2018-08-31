@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link }  from 'react-router';
+import { Link }  from 'react-router-dom';
 import bundlePic from '../../../images/spiral-curl-five-bundles.JPG';
 import './styles.scss';
 import { connect } from 'react-redux';
@@ -11,7 +11,7 @@ class FiveBundle extends React.Component {
     this.state = this.props.item
       ? this.props.item
       : {
-        name: '',
+        name: '5 Bundle Hair Texture',
         priceOne: '',
         priceTwo: '',
         priceThree: '',
@@ -31,6 +31,7 @@ class FiveBundle extends React.Component {
   render() {
     return (
       <div>
+        <h5 className="header-links"><Link className="header-links" to="../../">Home </Link> > <Link className="header-links" to="../bundles">Bundles </Link>> 5 Bundles </h5>
         <h1>5 Bundles</h1>
         <div id="five-bundle-main">
           <div id="col1-bundles">
@@ -38,7 +39,7 @@ class FiveBundle extends React.Component {
           </div>
           <div id="col2-bundles">
             <form className="five-bundle-form" onSubmit={this.handleSubmit}>
-              <select name="texture" id="5-bundle-hair-texture" onChange={this.handleChange}required>
+              <select name="texture" id="5 Bundle Hair Texture" onChange={this.handleChange}required>
                 <option value="" defaultValue>Select hair type...</option>
                 <option value="kinky-curl">Brazilian Mink Kinky Curl</option>
                 <option value="straight">Brazilian Mink Straight</option>
@@ -113,14 +114,8 @@ class FiveBundle extends React.Component {
             </form>
           </div>
         </div>
-        <div className="fb-share-button" data-to="https://www.hairbyadara.com/bundles/5-bundles" data-layout="button" data-size="small" data-mobile-iframe="true">
-          <h3 className="share-header">Share this product</h3>
-          {/* <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/bundles/4-bundles" target="_blank" className="share-button" className="fb-xfbml-parse-ignore share-facebook">Share</Link>
-            <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/bundles/4-bundles" target="_blank" className="share-button" className="share-twitter">Tweet</Link>
-            <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/bundles/4-bundles&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" target="_blank" className="share-button" className="share-pinterest">Pin it</Link>
-            <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/bundles/4-bundles&Title=Brazilian%20Kinky%20Curl&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" target="_blank" className="share-button" className="share-fancy">Fancy</Link>
-            <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/bundles/4-bundles" target="_blank" className="share-button" className="share-google">+1</Link> */}
-        </div>
+        <h4 className="share-header">Share this product</h4>
+        <div className="sharethis-inline-share-buttons"></div>
       </div>
     );
   }

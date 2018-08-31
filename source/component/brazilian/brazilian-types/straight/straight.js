@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles.scss';
-import straightPic from '../../../images/straight-3-bundles.JPG';
 import kinkyPic from '../../../images/kinky-curl-3–bundles.JPG';
 import bodyWavePic from '../../../images/body-wave-three-brazilian-front-angle.JPG';
+import './styles.scss';
 import { connect } from 'react-redux';
 import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
-
+import Slider from 'react-slick';
+import slide1 from '../../../images/straight-3-bundles.JPG';
+import slide2 from '../../../images/brazil-straight-front.jpg';
+import slide3 from '../../../images/brazil-straight-side.jpg';
+import slide4 from '../../../images/brazil-straight-back.jpg';
 
 class BrazilianStraight extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'brazilian straight',
+      name: 'Brazilian Straight',
       price: 75,
       length : '',
       quantity: '',
@@ -28,13 +31,39 @@ class BrazilianStraight extends React.Component {
     this.setState({[event.target.name]: event.target.value});
   }
   render() {
+    const settings = {
+      infinite: true,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      cssEase: 'linear',
+      fade: true,
+      arrows: false,
+      centerMode: true,
+    };
     return (
       <div>
-        <h1>Brazilian Straight</h1>
+        <h5 className="header-links"><Link className="header-links" to="../../">Home </Link> > <Link className="header-links" to="../brazilian">Brazilian </Link>> Brazilian Straight </h5>
         <div id="col1-straight">
-          <img src={straightPic} width="80%" height="100%"/>
+          <Slider ref={slider => (this.slider = slider)} {...settings}>
+            <div>
+              <img src={slide1} className="slider-image" width="100%" height="100%"/>
+            </div>
+            <div>
+              <img src={slide2} className="slider-image" width="100%" height="100%"/>
+            </div>
+            <div>
+              <img src={slide3} className="slider-image" width="100%" height="100%"/>
+            </div>
+            <div>
+              <img src={slide4} className="slider-image" width="100%" height="100%"/>
+            </div>
+          </Slider>
         </div>
         <div id="col2-straight">
+          <h1>Brazilian Straight</h1>
           <h4>$ 75.00</h4>
           <form className="brazilian-straight-form" onSubmit={this.handleSubmit}>
             <p>Length</p>
@@ -90,26 +119,17 @@ class BrazilianStraight extends React.Component {
           </ul>
           Note: Excessive heat/color can damage texture and curl pattern of your bundles.
         </h5>
-        <div className="place-holder">
-
-          <div className="fb-share-button" data-to="https://www.hairbyadara.com/brazilian/straight" data-layout="button" data-size="small" data-mobile-iframe="true">
-            <h4>Share this product </h4>
-            <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-straight" target="_blank" className="share-button" className="fb-xfbml-parse-ignore share-facebook">Share</Link>
-            <Link to="https://twitter.com/share?text=Brazilian%20Mink%20Straight&url=https://www.hairbyadara.com/brazilian-straight" target="_blank" className="share-button" className="share-twitter">Tweet</Link>
-            <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-straight&media=http://cdn.shopify.com/s/files/1/1235/5700/products/imageedit_4_8203888054_1024x1024.jpg?v=1476923593&description=Brazilian%20Mink%20Straight" target="_blank" className="share-button" className="share-pinterest">Pin it</Link>
-            <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-straight&Title=Brazilian%20Mink%20Straight&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/imageedit_4_8203888054_1024x1024.jpg?v=1476923593" target="_blank" className="share-button" className="share-fancy">Fancy</Link>
-            <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-straight" target="_blank" className="share-button" className="share-google">+1</Link>
-          </div>
+        <h4 className="share-header">Share this product</h4>
+        <div className="sharethis-inline-share-buttons"></div>
+        <div className="brazilian-collection-pic">
           <h4>More from this collection</h4>
-          <div className="brazilian-collection-pic">
-            <div className="brazilian-collection">
-              <Link to="../brazilian/kinky-curl"><img src={kinkyPic} width="75%" height="75%"/></Link>
-              <p>Brazilian Kinky Curl</p>
-            </div>
-            <div className="brazilian-collection">
-              <Link to="../brazilian/body-wave"><img src={bodyWavePic} width="75%" height="75%"/></Link>
-              <p>Brazilian Mink Body-Wave</p>
-            </div>
+          <div className="brazilian-collection">
+            <Link to="../brazilian/kinky-curl"><img src={kinkyPic} width="75%" height="75%"/></Link>
+            <p>Brazilian Kinky Curl</p>
+          </div>
+          <div className="brazilian-collection">
+            <Link to="../brazilian/body-wave"><img src={bodyWavePic} width="75%" height="75%"/></Link>
+            <p>Brazilian Mink Body-Wave</p>
           </div>
         </div>
       </div>

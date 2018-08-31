@@ -2,12 +2,11 @@
 #col2-kc {
   display: inline-block;
   position: relative;
-  width: 49.5%;
+  width: 48%;
   margin: 2px;
   padding: 0;
   height: auto;
 }
-
 #col1-kc {
   float: left;
 }
@@ -18,18 +17,15 @@
   display: block;
 }
 
-
-
 @media screen and (max-device-width: 480px){
   #col1-kc,
   #col2-kc {
-    display: inline-block;
+    display: block;
     position: relative;
-    width: 49.5%;
+    width: 100%;
     margin: 0;
     padding: 0;
   }
-
   .content {
     width: 100%;
      display: block;

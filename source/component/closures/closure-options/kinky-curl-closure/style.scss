@@ -23,14 +23,14 @@
   margin-bottom: 21%;
 }
 
-#share-links-kc {
-  padding-top: 20%;
-}
-
 @media screen and (max-device-width: 480px){
-  #kinky-curl-closure-pic{
+  #kinky-curl-closure-pic,
+  #kinky-curl-closure-info{
+    display: block;
+    position: relative;
+    width: 100%;
     margin: 0;
-    width: 50%
+    padding: 0;
   }
 
   #bw-collection-pic2 {

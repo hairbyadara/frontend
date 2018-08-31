@@ -1,9 +1,24 @@
-#four-bundle-main {
-  margin-left: 13%;
+#col1-bundle, #col2-bundle {
+  display: inline;
+  margin: 0;
+  padding: 10px;
 }
 
+#col1-bundle {
+  float: left;
+  width: 49%;
+}
 .four-bundle-button{
   margin: 0;
+}
+
+// #bundle-share {
+//   padding-top: 17%;
+// }
+
+#bundle-share > :link {
+  padding: 0;
+  margin: 3px;
 }
 
 @media screen and (max-device-width: 480px) {

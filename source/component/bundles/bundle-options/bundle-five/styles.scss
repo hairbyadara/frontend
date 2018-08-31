@@ -1,11 +1,27 @@
-#five-bundle-main {
-  margin-left: 13%;
+#col1-bundles,
+#col2-bundles {
+  display: inline;
+  margin: 0;
+  padding: 10px;
 }
 
 .five-bundle-button {
-   margin: 0;
- }
+  margin: 0;
+}
 
+#col1-bundles {
+  float: left;
+  width: 49%;
+}
+
+.four-bundle-button{
+  margin: 0;
+}
+
+#bundles-share > :link {
+  padding: 0;
+  margin: 3px;
+}
  @media screen and (max-device-width: 480px) {
   #col1-bundles, #col2-bundles {
     display: inline-block;

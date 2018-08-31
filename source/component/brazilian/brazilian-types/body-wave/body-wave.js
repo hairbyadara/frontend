@@ -1,18 +1,21 @@
 import React from 'react';
 import './style.scss';
 import { Link } from 'react-router-dom';
-import bodyWavePic from '../../../images/wavy-3bundles-resize.JPG';
 import straightBundlePic from '../../../images/straight-3-bundles.JPG';
 import kinkyCurlPic from '../../../images/kinky-curl-3–bundles.JPG';
 import { connect } from 'react-redux';
 import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
-
+import Slider from 'react-slick';
+import slide1 from '../../../images/wavy-3bundles-resize.JPG';
+import slide2 from '../../../images/body-wave-fredos-front.jpg';
+import slide3 from '../../../images/body-wave-fredos-side.jpg';
+import slide4 from '../../../images/body-wave-fredos-back.jpg';
 
 class BrazilianBodyWave extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Brazilian Body-Vave',
+      name: 'Brazilian Body-Wave',
       price: 75,
       length : '',
       quantity: '',
@@ -28,14 +31,39 @@ class BrazilianBodyWave extends React.Component {
     this.setState({[event.target.name]: event.target.value});
   }
   render() {
+    const settings = {
+      infinite: true,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      cssEase: 'linear',
+      fade: true,
+      arrows: false,
+      centerMode: true,
+    };
     return (
       <div>
-        <h1>Brazilian Mink Body Wave</h1>
+        <h5 className="header-links"><Link className="header-links" to="../../">Home </Link> > <Link className="header-links" to="../brazilian">Brazilian </Link>> Brazilian Mink Body Wave </h5>
         <div id="col1-bw">
-          <img src={bodyWavePic} height="100%" width="100%" id="body-wave-pic"/>
+          <Slider ref={slider => (this.slider = slider)} {...settings}>
+            <div>
+              <img src={slide1} className="slider-image" width="100%" height="100%"/>
+            </div>
+            <div>
+              <img src={slide2} className="slider-image" width="100%" height="100%"/>
+            </div>
+            <div>
+              <img src={slide3} className="slider-image" width="100%" height="100%"/>
+            </div>
+            <div>
+              <img src={slide4} className="slider-image" width="100%" height="100%"/>
+            </div>
+          </Slider>
         </div>
         <div id="col2-bw">
-          <h4>$ 75.00</h4>
+          <h1>Brazilian Mink Body-Wave</h1>
           <p>Length</p>
           <form className="brazilian-bodywave-form" onSubmit={this.handleSubmit}>
             <select name="length" id="body-wave-length" onChange={this.handleChange} required>
@@ -64,6 +92,7 @@ class BrazilianBodyWave extends React.Component {
               <option value="9">9</option>
               <option value="10">10</option>
             </select>
+            <h4>$ 75.00</h4>
             <button type="submit"><span>Add to Cart</span></button>
           </form>
         </div>
@@ -90,18 +119,10 @@ class BrazilianBodyWave extends React.Component {
           </ul>
           Note: Excessive heat/color can damage texture and curl pattern of your bundles.
         </h5>
-        <div className="fb-share-button" data-to="https://www.hairbyadara.com/brazilian/body-wave" data-layout="button" data-size="small" data-mobile-iframe="true">
-          <h4 className="share-header">Share this product</h4>
-          <Link to="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hairbyadara.com%2Fbrazilian%2Fbody-wave&amp;src=sdkpreparse" target="_blank" className="fb-xfbml-parse-ignore share-facebook">Share</Link>
-          <Link to="//twitter.com/share?text=Brazilian%20Mink%20Body%20Wave&amp;url=https://www.hairbyadara.com/products/brazilian-body-wave" target="_blank" className="share-twitter">Tweet  </Link>
-          <Link to="//pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/products/brazilian-body-wave&amp;media=http://cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336&amp;description=Brazilian%20Mink%20Body%20Wave" target="_blank" className="share-pinterest">Pin it</Link>
-          <Link to="//fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/products/brazilian-body-wave&amp;Title=Brazilian%20Mink%20Body%20Wave&amp;Category=Other&amp;ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/mink_body_wave_before_resize_1024x1024.jpg?v=1476947336" target="_blank" className="share-fancy">Fancy</Link>
-          <Link to="//plus.google.com/share?url=https://www.hairbyadara.com/products/brazilian-body-wave" target="_blank" className="share-google">+1</Link>
-        </div>
-        <br>
-        </br>
-        <h4>More from this collection</h4>
+        <h4 className="share-header">Share this product</h4>
+        <div className="sharethis-inline-share-buttons"></div>
         <div className="brazilian-collection-pic">
+          <h4>More from this collection</h4>
           <div className="brazilian-collection">
             <Link to="../brazilian/straight"><img src={straightBundlePic} width="75%" height="75%"/></Link>
             <p>Brazilian Mink Straight</p>

@@ -9,6 +9,7 @@
 
 #kinky-curl-frontal-pic {
   float: left;
+  height: 400px;
 }
 
 #bw-collection-pic5 {
@@ -23,24 +24,15 @@
   margin-bottom: 20%;
 }
 
-#share-links-cf {
-  padding-top: 26%;
-  text-align: left;
-}
-#share-links-cf > h4 {
-  padding-left: 0;
-  text-align: left;
-}
 
 @media screen and (max-device-width: 480px){
-  #kinky-curl-frontal-info {
+  #kinky-curl-frontal-info,
+  #kinky-curl-frontal-pic {
+    display: block;
+    position: relative;
+    width: 100%;
     margin: 0;
-    width: 80%
-  }
-  #kinky-curl-frontal-info {
-    margin: 0;
-    padding-left: 15%;
-    width: 20%;
+    padding: 0;;
   }
 
   #bw-collection-pic5 {

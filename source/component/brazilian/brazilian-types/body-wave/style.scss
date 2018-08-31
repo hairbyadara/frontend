@@ -1,4 +1,8 @@
 @media screen and (min-device-width: 900px){
+  h1 > a {
+    padding: 0;
+    margin: 0;
+  }
   #col1-bw,
   #col2-bw {
     display: inline-block;
@@ -18,27 +22,17 @@
     margin-right:4%;
     display: block;
   }
-  // .fb-share-button {
-  //   padding: 0;
-  //   margin: 0;
-  // }
-  // .share-facebook,
-  // .share-twitter,
-  // .share-pinterest,
-  // .share-fancy,
-  // .share-google {
-  //   display: inline-block;
-  //   margin: 1px;
-  //   padding: 1px;
-  // }
-}
 
+  #bw-share > :link {
+      padding: 0;
+      margin: 3px;
+  }
+}
 @media screen and (max-device-width: 480px){
   #col1-bw,
   #col2-bw {
-    display: inline-block;
+    display: block;
     position: relative;
-    width: 49.5%;
     margin: 0;
     padding: 0;
   }

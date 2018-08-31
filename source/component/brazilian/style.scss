@@ -7,6 +7,9 @@
   padding: 0;
   text-align: center;
 }
+#body-wave {
+  padding-top: 2%;
+}
 
 #kinky-img {
   padding-bottom: 15%;
@@ -20,9 +23,14 @@
 }
 
 .brazilian-collection-pic {
-  padding-left: 5%
+  padding-left: 5%;
+  padding-top: 30%;
 }
 
+.header-links :link {
+  padding: 0;
+  color: black;
+}
 
 
 @media screen and (max-device-width: 480px) {

@@ -23,19 +23,14 @@
   margin-bottom: 40%;
 }
 
-#share-links-sc {
-  padding-top: 20%;
-}
-
 @media screen and (max-device-width: 480px){
-  #straight-closure-pic {
-    margin: 0;
-    width: 50%
-  }
+  #straight-closure-pic,
   #straight-closure-info {
+    display: block;
+    position: relative;
+    width: 100%;
     margin: 0;
-    padding-left: 5%;
-    width: 20%;
+    padding: 0;
   }
 
   #bw-collection-pic3 {

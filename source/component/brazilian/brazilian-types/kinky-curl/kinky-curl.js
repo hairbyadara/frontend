@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bkcPic from '../../../images//kinky-curl-3–bundles.JPG';
 import bwPic from '../../../images/body-wave-three-brazilian-front-angle.JPG';
 import sPic from '../../../images/straight-3-bundles.JPG';
 import './styles.scss';
 import { connect } from 'react-redux';
 import { cartCreate } from '../../../../actions/cart-actions/cart-actions';
-
+import Slider from 'react-slick';
+import slide1 from '../../../images//kinky-curl-3–bundles.JPG';
+import slide2 from '../../../images/brazil-kinkycurl-fetlew-front.jpg';
+import slide3 from '../../../images/brazil-kinkycurl-fetlew-side.jpg';
+import slide4 from '../../../images/brazil-kinkycurl-fetlew-back.jpg';
 
 class BrazilianKinkyCurl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name:'brazilian kinky-curl',
+      name:'Brazilian Kinky-Curl',
       price: 80,
       length : '',
       quantity: '',
@@ -28,14 +31,39 @@ class BrazilianKinkyCurl extends React.Component {
     this.setState({[event.target.name]: event.target.value});
   }
   render() {
+    const settings = {
+      infinite: true,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      cssEase: 'linear',
+      fade: true,
+      arrows: false,
+      centerMode: true,
+    };
     return (
       <div>
-        <h1>Brazilian Kinky Curl</h1>
+        <h5 className="header-links"><Link className="header-links" to="../../">Home </Link> > <Link className="header-links" to="../brazilian">Brazilian </Link>> Brazilian Kinky Curl </h5>
         <div id="col1-kc">
-          <img src={bkcPic} id="kc-image" width="100%" height="100%"/>
+          <Slider ref={slider => (this.slider = slider)} {...settings}>
+            <div>
+              <img src={slide1} className="slider-image" width="100%" height="100%"/>
+            </div>
+            <div>
+              <img src={slide2} className="slider-image" width="100%" height="100%"/>
+            </div>
+            <div>
+              <img src={slide3} className="slider-image" width="100%" height="100%"/>
+            </div>
+            <div>
+              <img src={slide4} className="slider-image" width="100%" height="100%"/>
+            </div>
+          </Slider>
         </div>
         <div id="col2-kc">
-          <h4>$ 80.00</h4>
+          <h1>Brazilian Kinky Curl</h1>
           <p>Length</p>
           <form className="brazilian-kinky-form" onSubmit={this.handleSubmit}>
             <select name="length" id="BKCLength" onChange={this.handleChange} required>
@@ -64,6 +92,7 @@ class BrazilianKinkyCurl extends React.Component {
               <option value="9">9</option>
               <option value="10">10</option>
             </select>
+            <h4>$ 80.00</h4>
             <button type="submit"><span>Add to Cart</span></button>
           </form>
         </div> 
@@ -90,18 +119,10 @@ class BrazilianKinkyCurl extends React.Component {
           </ul>
             Note: Excessive heat/color can damage texture and curl pattern of your bundles.
         </h5>
-        <div className="placeholder kc-ph">
-          <div className="fb-share-button" data-to="https://www.hairbyadara.com/brazilian/kinky-curl" data-layout="button" data-size="small" data-mobile-iframe="true">
-            <h4>Share this product</h4>
-            <Link to="https://www.facebook.com/sharer.php?u=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="share-button" className="fb-xfbml-parse-ignore share-facebook">Share</Link>
-            <Link to="https://twitter.com/share?text=Brazilian%20Kinky%20Curl&url=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="share-button" className="share-twitter">Tweet</Link>
-            <Link to="https://pinterest.com/pin/create/button/?url=https://www.hairbyadara.com/brazilian-kinky-curl&media=http://cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476&description=Brazilian%20Kinky%20Curl" target="_blank" className="share-button" className="share-pinterest">Pin it</Link>
-            <Link to="https://fancy.com/fancyit?ItemURL=https://www.hairbyadara.com/brazilian-kinky-curl&Title=Brazilian%20Kinky%20Curl&Category=Other&ImageURL=//cdn.shopify.com/s/files/1/1235/5700/products/brazilian-kinkycurl_1024x1024.jpg?v=1460084476" target="_blank" className="share-button" className="share-fancy">Fancy</Link>
-            <Link to="https://plus.google.com/share?url=https://www.hairbyadara.com/brazilian-kinky-curl" target="_blank" className="share-button" className="share-google">+1</Link>
-          </div>
-        </div>
-        <h4>More from this collection</h4>
+        <h4 className="share-header">Share this product</h4>
+        <div className="sharethis-inline-share-buttons"></div>
         <div className="brazilian-collection-pic">
+          <h4>More from this collection</h4>
           <div className="brazilian-collection">
             <Link to="../brazilian/straight"><img src={sPic} width="75%" height="75%"/></Link>
             <p>Brazilian Mink Straight</p>

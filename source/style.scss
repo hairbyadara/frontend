@@ -45,3 +45,9 @@ p , select, button{
 p , select {
   padding: 0;
 }
+
+@media screen and (max-device-width: 480px) {
+  h5 > :link {
+    display: inline;
+  }
+}

@@ -7,6 +7,7 @@ export default class Bundles extends React.Component {
   render() {
     return (
       <div>
+        <h5 className="header-links"><Link to="../">Home </Link>> Bundles</h5>
         <h1>Bundles</h1>
         <div id="col1">
           <Link to="bundles/4-bundles"><img className="bundlePic" src={bundlesPic} width="75%" height="75%"/></Link>
